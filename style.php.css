@@ -1,0 +1,1462 @@
+/* kolor tla strony, tekstu na stronie oraz rozmiaru marginesu */
+BODY { background:url("tlo.gif"); color: #896a4b; font-size:75%; font-family: Georgia, Arial, Tahoma, Verdana, sans-serif; margin: 0px; font-weight:normal; }
+h1, h2, h3, h4, h5, h6, p { margin:0px; padding:0px; font-size:1.0em; }
+img { border:0px; }
+table { border-collapse: collapse; border-spacing:0; font-family: 'PT Sans',  Arial, Tahoma, Verdana, sans-serif; margin: 0px; font-weight:normal; }
+.cl { clear:both; }
+.Lf { float:left; }
+.Rg { float:right; }
+aside, article, nav, section, footer, header { display:block; margin:0px; padding:0px; }
+
+/* link z logo sklepu */
+#LinkLogo { font-size:0px; display:block; }
+
+/* definiowanie wygladu szablonu */
+#Strona { margin:0px auto; width:957px; background:url("drewno.png") repeat-y; }
+#Naglowek { width:931px; height:234px; background:url("naglowek2020.jpg") no-repeat; margin:0px auto; position:relative; }
+#StronaWew { overflow:hidden; width:911px; margin:0px auto; }
+
+/* kolumny */
+#LewaKolumna { float:left; overflow:hidden; width:215px; }
+#LewaKolumnaPrzerwa { margin-right:15px; }
+#PrawaKolumna { float:left; overflow:hidden; width:215px; }
+#PrawaKolumnaPrzerwa { margin-left:15px; }
+#SrodekKolumna { float:left; overflow:hidden; }
+
+#Logo { position:absolute; margin-top:25px; margin-left:275px }
+#Logo img { width:200px; height:auto; }
+#Serwis { margin-left:500px; margin-top:152px; position:absolute; }
+#Serwis img { margin:1px; width:16px; height:16px; }
+
+#WyborJezyka { position:absolute; margin:152px 0px 0px 123px; }
+#WyborJezyka .Flaga { padding:3px 0px 3px 3px; }
+#WyborJezyka .FlagaOff { cursor:pointer; opacity:0.6; filter:alpha(opacity=60); }
+
+#GlowneMenu { position:absolute; margin-top:178px; margin-left:23px; width:690px; text-align:center; }
+#GlowneMenu ul { list-style-type:none; padding:0px; margin:0px; }   
+#GlowneMenu ul li { background:url("sep.png") no-repeat left center; display:inline-block; padding-left:2px; }
+/* rozwijane gorne menu */
+#GlowneMenu ul li ul { position:absolute; background:#fdfaf5; opacity:0; filter:alpha(opacity=0); max-width:250px; z-index:100; visibility:hidden; overflow:hidden; text-align:left; padding:15px !important;
+  transition: all 0.20s ease-in-out;
+	-moz-transition: all 0.20s ease-in-out;
+	-webkit-transition: all 0.20s ease-in-out;
+	-o-transition: all 0.20s ease-in-out;
+  -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px; -khtml-border-radius:8px;
+  border:1px solid #f9b104;
+}  
+#GlowneMenu ul li:hover ul { opacity:1; filter:alpha(opacity=100); visibility:visible; }
+#GlowneMenu ul li:hover > a, #GlowneMenu ul li:hover > span { color:#f9b104; }
+#GlowneMenu ul li ul li { position:relative; border:0px; display:block; padding:0px; background:transparent; }
+#GlowneMenu ul li ul li a { padding:5px 10px 5px 10px; display:block; line-height:normal; height:auto; font-size:100%; }
+/* ogolny wyglad linku w menu */
+#GlowneMenu a, #GlowneMenu span { padding:0px 14px 0px 14px; height:46px; line-height:46px; color:#401801; font-size:120%; font-weight:normal; display:inline-block; }
+#GlowneMenu a:hover, #GlowneMenu span:hover { color:#f9b104; }
+#GlowneMenu ul li:first-child { background:transparent; padding-left:0px; }
+
+/* koszyk w pasku gornym */
+#Koszyk { position:absolute; margin-top:20px; margin-left:735px; text-align:left; background:url("koszyk.png") no-repeat left top; padding-left:60px; }
+#Koszyk span { font-size:150%; }
+#Koszyk strong { font-size:160%; display:inline-block; margin-bottom:3px; font-weight:normal; text-transform:uppercase; }
+#Koszyk a.Koszyk { display:inline-block; color:#fff; margin-bottom:12px; }
+#Koszyk a.Koszyk:hover { text-decoration:none; color:#f6c99b; }
+#Koszyk b { display:inline-block; color:#fff; margin:5px 10px 12px 0px; font-weight:normal; font-size:120%; }
+
+/* logowanie i zalozenie konta w pasku */
+#MenuLogowanie { position:absolute; margin-top:110px; margin-left:725px; text-align:left; }
+#MenuLogowanie a { display:block; padding:5px 10px 5px 10px; color:#fff; font-size:110%; }
+#MenuLogowanie a:hover { text-decoration:none; color:#f7d4b0; }
+
+/* kontakt na pasku*/
+.MenuKontakt { position:absolute; margin-top:160px; margin-left:725px; text-align:left; }
+.MenuKontakt a { display:table-cell; padding:5px 10px 5px 10px; color:#fff; font-size:110%; }
+.MenuKontakt a:hover { text-decoration:none; color:#f7d4b0; }
+
+/* stopka */
+#Stopka { display:table; width:930px; border-collapse:collapse; border-spacing:0; background:#fdfaf5; margin:30px 0px 20px 13px; }
+.KolumnaStopki { width:19%; vertical-align:top; display:table-cell; padding:20px 0px 20px 40px; }
+.KolumnaStopki strong { color:#411301; display:block; margin-bottom:10px; padding-bottom:10px; font-size:160%; font-weight:normal; text-transform:uppercase; }
+.KolumnaStopki ul { list-style-type:none; padding:0px; margin:0px; } 
+.KolumnaStopki ul li { margin-bottom:7px; }
+.KolumnaStopki a { color:#411301; display:inline-block; }
+.KolumnaStopki a:hover { color:#000000; }
+.KolumnaLogo { width:24%; vertical-align:middle; display:table-cell; padding:20px; text-align:right; }
+
+.Transferuj { display:inline-block; margin:5px 0px 5px 18px; font-size:0px; }
+
+#WyszukiwanieOkno { display:table; width:100%; margin-bottom:10px; }
+#WyszukiwanieOkno strong { display:table-cell; vertical-align:middle; color:#401801; font-size:180%; font-weight:normal; width:80px; }
+#Wyszukiwanie { display:table-cell; vertical-align:middle; }
+#Wyszukiwanie #InSzukaj { height:34px; float:left; border:1px solid #f6c99b; width:100%; padding:0px 40px 0px 9px; background:url("tlo_szukaj.png") repeat-x left bottom; color:#6e4d2b; 
+  -moz-border-radius:6px; -webkit-border-radius:6px; -khtml-border-radius:6px; border-radius:6px; 
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+#Wyszukiwanie #ButSzukaj { float:left; margin:5px 0px 0px -32px; }
+#WyszukiwanieOkno div a { display:inline-block; color:#71563b; margin:5px 0px 0px 9px; text-transform:lowercase; font-size:90%; }
+#WyszukiwanieOkno div a:hover { color:#ffffff; }
+
+.Copy { padding:7px 30px 7px 30px; text-align:right; font-size:80%; }
+.Copy a { color:#d0bba1; } 
+
+#fbd { z-index:50; cursor:pointer; width: 350px; height: 400px; top:150px; right: -300px; position: fixed; padding: 5px; padding-top:10px; background: url("facebook.png") no-repeat left top; color:#fff; }
+#fbd iframe { z-index:50; width: 295px; height: 400px; float: right; }
+#blog { z-index:45; cursor:pointer; width:51px; height:51px; top:90px; right:9px; position: fixed; background: url("urn:scrapbook:download:error:https://www.czasnaherbate.net/szablony/czasnaherbate/obrazki/szablon/blog.png") no-repeat left top; color:#fff; }
+#blog a { width:51px; height:51px; display:inline-block; }
+
+/* ogolny wyglad linkow */
+a { text-decoration:none; color: #896a4b; font-weight:normal; }
+a:hover { text-decoration:none; color:#5c452f; }
+
+/* linki produktow */
+h3 a { color:#954d04; font-size:110%; text-transform:uppercase; }
+
+/* link pdf */
+.pdfIkona { background:url("") no-repeat left center; padding:5px 0px 5px 25px; }
+
+/* divy jako tabela */
+.TabelaTbl { display:table; width:100%; border-collapse:collapse; border-spacing:0; }
+.KomorkaTbl { width:25%; display:table-cell; vertical-align:middle; text-align:center; }
+  
+/* sekcja produktow lub elementow w modulach i listingach - rowna wysokosc elementow */
+.WierszTbl { display:table-row; }
+.SekcjaRowna { display: table; width:100%; border-collapse: collapse; border-spacing:0; }
+.SekcjaRowna:last-child { border-bottom:0px; }
+
+/* uzywane tam gdzie jest dodatkowy przycisk po listingu - np galeria czy listing artykulow kategorii */
+.SekcjaRownaOstatnia { display: table; width:100%; border-collapse: collapse; border-spacing:0; }
+.SekcjaRownaOstatnia:nth-last-child(3) { border-bottom:0px; }
+
+/* definicja zdjecia */
+.Zdjecie { padding:5px; }
+#ZoomChwilowe { position:absolute; background:url("") no-repeat; width:37px; height:37px; display:inline-block; }
+.Zoom { display:inline-block; }
+
+/* ramka foto animacji koszyka */
+#AnimacjaKoszyka { border:2px solid #896a4b; }
+
+/* wyglad ramki powiekszonego obrazka w listingu */
+.PowiekszoneZdjecie img { border:1px solid #a79282; }
+
+/* ikonki zdjec */
+.IkonkiProduktu { position:absolute; margin:0px 0px 0px 0px; width:100px; height:100px; z-index:99; text-align:left; }
+.Ikona { display:block; height:32px; }
+.IkonaWysoka { display:block; height:52px; }
+.Nowosc_pl { background:url("") no-repeat; width:53px; z-index:99; }
+.Promocja_pl { background:url("") no-repeat; width:60px; z-index:99; }
+.Polecany_pl { background:url("") no-repeat; width:62px; z-index:99; }
+.Hit_pl { background:url("") no-repeat; width:60px; z-index:99; }
+.Dostawa_pl { background:url("") no-repeat; width:108px; z-index:99; }
+.TylkoInternet_pl { background:url("") no-repeat; width:126px; z-index:99; }
+.Nowosc_en { background:url("") no-repeat; width:34px; z-index:99; }
+.Promocja_en { background:url("") no-repeat; width:60px; z-index:99; }
+.Polecany_en { background:url("") no-repeat; width:62px; z-index:99; }
+.Hit_en { background:url("") no-repeat; width:60px; z-index:99; }
+.Dostawa_en { background:url("") no-repeat; width:80px; z-index:99; }
+.TylkoInternet_en { background:url("") no-repeat; width:106px; z-index:99; }
+.Wyprzedaz_pl { background:url("") no-repeat; width:68px; z-index:99; }
+.Wyprzedaz_en { background:url("") no-repeat; width:35px; z-index:99; }
+
+/* informacja */
+.Informacja { background:url("") no-repeat left center; padding:7px 5px 7px 35px; } 
+.InformacjaOk { background:url("") no-repeat left center; padding:7px 5px 7px 35px; }
+span.Informacja { display:inline-block; } 
+
+/* ikonki przesuwania strony gora - dol */
+#doGory { position:fixed; right:20px; top:70px; cursor:pointer; width:44px; height:24px; background:url("scroll.png") no-repeat left top; opacity:0.4; filter:alpha(opacity=40); display:none; }
+#doGory:hover { opacity:1; filter:alpha(opacity=100); }
+#doDolu { position:fixed; right:20px; bottom:20px; cursor:pointer; width:44px; height:24px; background:url("scroll.png") no-repeat left bottom; opacity:0.4; filter:alpha(opacity=40); display:none; }
+#doDolu:hover { opacity:1; filter:alpha(opacity=100); }
+
+/*** wyglad czesci srodkowej ***/
+
+/* naglowek modulow i stron w czesci srodkowej */
+.StrNaglowek { color:#ffffff; font-size:17px; font-weight:normal; background:#a60000; overflow:hidden; text-transform:uppercase;
+  -moz-border-radius:7px; -webkit-border-radius:7px; -khtml-border-radius:7px; border-radius:7px;
+}
+.StrNaglowek span { display:inline-block; overflow:hidden; padding:13px 13px 10px 13px; }
+.StrNaglowek a { font-size:20px; display:inline-block; text-align:right; color:#ffffff; }
+.StrNaglowek a:hover { color:#f6c99b; }
+
+/* podstrony i wyglad modulow - czesc srodkowa sklepu */
+.StrTresc { margin:10px 0px 15px 0px; overflow:hidden; padding:1px; }
+
+/* okno porownywarki */
+#PorownywarkaTable { margin-bottom:8px; }
+#PorownywarkaTable td { padding:7px; width:250px; border:1px dotted #e9ceb2; text-align:center; vertical-align: top; }
+#PorownywarkaTable td:first-child { background:#f6f6f6; color:#97724c; text-align:right; font-weight:bold; width:150px !important; }
+#PorownywarkaTable tr:nth-child(odd) { background:#f6f6f6; }
+#PorownywarkaTable .Opisy { text-align:left; margin:10px; }
+#PorownywarkaTable .DodatkowePola { text-align:left; margin-top:10px; }
+#PorownywarkaTable .DodatkowePola .PolaTbl { display:table; border-collapse: collapse; border-spacing:0; }
+#PorownywarkaTable .DodatkowePola .PolaTbl div { display:table-cell; vertical-align:middle; padding:2px 5px 2px 0px; }
+#PorownywarkaTable .Foto { position:relative; }
+
+/* formularze */
+input, select, textarea { font-size:100%; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; }
+.cmxform input, .cmxform select, .cmxform textarea, .InputIlosc { color:#82572d; border:1px solid #e9ceb2; padding:5px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.cmxform label { vertical-align:top; font-weight:normal; display: inline-block; line-height: 1.2; width:160px; padding-left:0px; padding-top:4px; padding-bottom:4px;}
+.cmxform label.required { font-weight:normal; display: inline-block; line-height: 1.2; background:transparent url("") no-repeat scroll center right;}
+.cmxform p { margin-bottom:10px; }
+.cmxform span { display:block; margin-bottom:5px; }
+.cmxform .error { color:#ff0000; }
+.cmxform label.error { font-weight: normal; background:transparent url("") no-repeat left center; display:block; margin:4px 0px 0px 0px; padding:2px 0px 2px 25px; width:80%}
+.cmxform em.required { vertical-align: top; width:5px; height:5px; display:inline-block; background:transparent url("") no-repeat scroll center right; }
+.cmxform .przycisk { cursor:pointer; padding:5px 12px 5px 12px; background:url("tlo_przycisku.png") repeat-x center center; border:0px; color:#ffffff; font-weight:normal; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.cmxform .przycisk:hover { color:#ffffff; background:url("tlo_przycisku_wl.png") repeat-x center center; }
+.cmxform .przyciskWylaczony { opacity:0.6; filter:alpha(opacity=60); padding:5px 12px 5px 12px; background:url("tlo_przycisku.png") repeat-x center center; border:0px; color:#ffffff; font-weight:normal; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.cmxform a.przycisk { cursor:pointer; padding:5px 12px 5px 12px; background:url("tlo_przycisku.png") repeat-x center center; border:0px; color:#ffffff; font-weight:normal; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+#rejestracja .OsobowoscPrawna { margin:20px 0px 20px 0px; }
+#rejestracja .OsobowoscPrawna b { display:inline-block; margin-right:15px; }
+#error-regulamin label.error, #error-przetwarzanie label.error { text-align:left; margin-left:3px; width:300px !important; }
+#rejestracja div.checkboxOpis { margin-left:35px; }
+#rejestracja .CheckSekcja { margin:12px 0px 10px 0px; display:block; }
+.cmxform span.tresc { display:inline; font-weight:bold; margin-bottom:5px; }
+.cmxform span.opis { display:inline; font-weight:normal; margin-bottom:5px; }
+.KontenerKoszykButton a.przycisk, .przyciskZamow, .przyciskZaplac { cursor:pointer; padding:15px 30px 15px 30px !important; background:#97724c !important; border:0px !important; color:#ffffff !important; font-weight:bold; font-size:150%; -moz-border-radius:7px !important; -webkit-border-radius:7px !important; -khtml-border-radius:7px !important; border-radius:7px !important; }
+.KontenerKoszykButton a.przycisk:hover, .przyciskZamow:hover, .przyciskZaplac:hover { background:#71563b !important; }
+
+/* wyglad przyciskow */
+.przycisk { cursor:pointer; margin-right:4px; display:inline-block; padding:5px 12px 5px 12px; background:url("tlo_przycisku.png") repeat-x center center; border:0px; color:#ffffff; font-weight:normal; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.przycisk:hover { color:#ffffff; background:url("tlo_przycisku_wl.png") repeat-x center center; }
+.Prawy { float:right; margin-top:20px; }
+.MargPrzycisk { margin-top:20px; }
+.PrawyBezMargin { float:right; margin-bottom:10px; }
+.Lewy { float:left; margin-top:20px; }
+/* do boxu ze strony informacyjnej i modulu srodkowego - link czytaj dalej */
+.StronaInfo { margin:5px; text-align:right; }
+
+/* do koszyka */
+.DoKoszyka { overflow:hidden; text-align:center; cursor:pointer; display:inline-block; padding:0px; float:left; font-style:normal; width:25px; height:30px; line-height:200px; background:url("tlo_przycisku_koszyka.png") no-repeat; }
+.DoKoszyka:hover { opacity:0.9; filter:alpha(opacity=90); }
+
+/* wyglad ceny */
+.Cena { font-size:17px; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; font-weight:normal; display:block; white-space:nowrap; }
+.CenaPromocyjna { color:#d6000a; font-size:17px; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; font-weight:normal; display:block; white-space:nowrap; }
+.Cena .Brutto, .CenaPromocyjna .Brutto { font-style: normal; font-size:19px; display:block; white-space:nowrap; }
+.Cena .Netto, .CenaPromocyjna .Netto { font-style: normal; font-size:15px; display:block; color:#897560; white-space:nowrap; }
+.Cena small, .CenaPromocyjna small { white-space:nowrap; }
+.CenaPromocyjna .CenaPoprzednia { color:#897560; font-size:80%; text-decoration:line-through; font-weight:normal; display:block; font-style:normal; white-space:nowrap; }
+.BrakCeny { color:#ff0000; font-weight:normal; display:block; }
+.CenaDlaZalogowanych { color:#ff0000; font-weight:normal; display:block; }
+
+/* nawigacja breadcrumb */
+#Nawigacja { margin-top:5px; margin-bottom:15px; font-size:90%; }
+.Nawigacja { color:#97724c; }
+.NawigacjaLink { color:#97724c; }
+.NawigacjaLink:hover { color:#896a4b; text-decoration:none; }
+
+/* preloader strony */
+#Preload { display:none; position:fixed; width:100%; height:100%; top:0px; left:0px; z-index:99999; background:#ffffff; opacity:0.5; filter:alpha(opacity=50); }
+#StatusTlo { display:none; position:absolute; left:50%; top:50%; background:#ffffff; margin:-64px 0 0 -64px; }
+#IkonaLoader { background:url("loader_strony.gif") no-repeat center center; width:128px; height:128px; }
+
+/* wyskakujace okienko z komunikatami */
+#PopUpInfo { font-size:110%; background:url("") no-repeat left center; padding:10px 10px 10px 45px; margin:0px 10px 0px 10px; max-width:500px; text-align:center; }
+#PopUpInfo h3 { text-align:center; margin:5px; font-weight:bold; }
+#PopUpDodaj { font-size:110%; background:url("") no-repeat left center; padding:10px 10px 10px 55px; margin:0px 20px 0px 20px; white-space:nowrap; text-align:center; }
+#PopUpDodaj h3 { text-align:center; margin:5px; font-weight:bold; }
+#PopUpUsun { font-size:110%; background:url("") no-repeat left center; padding:10px 10px 10px 55px; margin:0px 20px 0px 20px; white-space:nowrap; text-align:center; }
+#PopUpUsun h3 { text-align:center; margin:5px; font-weight:bold; }
+#PopUpPrzyciski { margin:20px 0px 0px 0px; text-align:center; min-width:300px; white-space:nowrap; }
+#PopUpPrzyciski a, #PopUpPrzyciski span { display:inline-block; margin:7px 10px 7px 10px; }
+
+/* animowane bannery na stronie glownej - modul coin slider */
+.coin-slider { overflow:hidden; zoom:1; position:relative; margin-bottom:10px; }
+.coin-slider a { text-decoration:none; outline:none; border:none; }
+.cs-buttons { font-size:0px; padding:10px 10px 0px 10px; float:left; }
+.cs-buttons a { margin-left:5px; height:12px; width:12px; float:left; background:url("") no-repeat; text-indent:-1000px; }
+.cs-active { background:url("") no-repeat !important; color:#ffffff; }
+.cs-title { width:100%; background-color:#000000; color:#ffffff; text-align:center; }
+.cs-title b { font-weight:normal; display:inline-block; padding:10px; }
+.cs-prev { background:url("") no-repeat; height:56px; width:36px; }
+.cs-next { background:url("") no-repeat; height:56px; width:36px; }
+
+/* animowane bannery na stronie glownej - modul fancy */
+#fancy-slider { overflow:hidden; position:relative; margin-bottom:10px; }
+.ft-title { width:100%; text-align:center; }
+.ft-title b { font-weight:normal; display:inline-block; padding:10px; }
+.ft-prev { background:url("") no-repeat; height:56px; width:36px; opacity:0.5; filter:alpha(opacity=50); }
+.ft-next { background:url("") no-repeat; height:56px; width:36px; opacity:0.5; filter:alpha(opacity=50); }
+.ft-prev:hover { opacity:1; filter:alpha(opacity=100); }
+.ft-next:hover { opacity:1; filter:alpha(opacity=100); }
+
+/* animowane bannery na stronie glownej - modul przewijany */
+#AnimacjaPrzewijanaKontener { position:relative; overflow:hidden; margin-bottom:15px; }
+#BanneryAnimacjaPrzewijanaLewaStrzalka, #BanneryAnimacjaPrzewijanaPrawaStrzalka { opacity:0; filter:alpha(opacity=0);
+  transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+#BanneryAnimacjaPrzewijana { width:50000px; list-style-type:none; padding:0px; margin:0px; }
+#BanneryAnimacjaPrzewijana li { float:left; overflow:hidden; }
+#BanneryAnimacjaPrzewijana li span { display:none; background:#000000; text-align:center; color:#ffffff; position:absolute; top:0px; padding:10px; opacity:0; filter:alpha(opacity=0); }
+#BanneryAnimacjaPrzewijana li:first-child span { display:block; opacity:0.7; filter:alpha(opacity=70); }
+#AnimacjaPrzewijanaKontener:hover #BanneryAnimacjaPrzewijanaLewaStrzalka, #AnimacjaPrzewijanaKontener:hover #BanneryAnimacjaPrzewijanaPrawaStrzalka { opacity:0.7; filter:alpha(opacity=70); }
+#BanneryAnimacjaPrzewijanaLewaStrzalka { cursor:pointer; z-index:14; position:absolute; left:0px; top:50%; margin-top:-28px; width:36px; height:56px; background:url("") no-repeat; }
+#BanneryAnimacjaPrzewijanaPrawaStrzalka { cursor:pointer; z-index:14; position:absolute; right:0px; top:50%; margin-top:-28px; width:36px; height:56px; background:url("") no-repeat; }
+#BanneryAnimacjaPrzewijanaNumer { display:none; }
+#BanneryAnimacjaPrzewijanaPrzyciski { position:absolute; width:100%; bottom:10px; text-align:center; }
+#BanneryAnimacjaPrzewijanaPrzyciski span { display:inline-block; cursor:pointer; background:#b7b7b7; margin:0px 2px 0px 2px; width:14px; height:14px; font-size:1px; overflow:hidden; line-height:100; -webkit-border-radius:7px; -moz-border-radius:7px; border-radius:7px; -khtml-border-radius:7px; }
+#BanneryAnimacjaPrzewijanaPrzyciski span:hover { background:#896a4b; }
+#BanneryAnimacjaPrzewijanaPrzyciski span.On { background:#896a4b; }
+
+/* animowane bannery na stronie glownej - modul przenikania */
+#AnimacjaPrzenikanieKontener { position:relative; overflow:hidden; margin-bottom:15px; }
+#BanneryAnimacjaPrzenikanieLewaStrzalka, #BanneryAnimacjaPrzenikaniePrawaStrzalka { opacity:0; filter:alpha(opacity=0);
+  transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+#BanneryAnimacjaPrzenikanie { width:50000px; list-style-type:none; padding:0px; margin:0px; }
+#BanneryAnimacjaPrzenikanie li { position:absolute; overflow:hidden; display:none; }
+#BanneryAnimacjaPrzenikanie li span { display:none; background:#000000; text-align:center; color:#ffffff; position:absolute; top:0px; padding:10px; opacity:0; filter:alpha(opacity=0); }
+#BanneryAnimacjaPrzenikanie li:first-child span { display:block; opacity:0.7; filter:alpha(opacity=70); }
+#BanneryAnimacjaPrzenikanie li:first-child { display:block; }
+#AnimacjaPrzenikanieKontener:hover #BanneryAnimacjaPrzenikanieLewaStrzalka, #AnimacjaPrzenikanieKontener:hover #BanneryAnimacjaPrzenikaniePrawaStrzalka { opacity:0.7; filter:alpha(opacity=70); }
+#BanneryAnimacjaPrzenikanieLewaStrzalka { cursor:pointer; z-index:14; position:absolute; left:0px; top:50%; margin-top:-28px; width:36px; height:56px; background:url("") no-repeat; }
+#BanneryAnimacjaPrzenikaniePrawaStrzalka { cursor:pointer; z-index:14; position:absolute; right:0px; top:50%; margin-top:-28px; width:36px; height:56px; background:url("") no-repeat; }
+#BanneryAnimacjaPrzenikanieNumer { display:none; }
+#BanneryAnimacjaPrzenikaniePrzyciski { position:absolute; width:100%; bottom:10px; text-align:center; }
+#BanneryAnimacjaPrzenikaniePrzyciski span { display:inline-block; cursor:pointer; background:#b7b7b7; margin:0px 2px 0px 2px; width:14px; height:14px; font-size:1px; overflow:hidden; line-height:100; -webkit-border-radius:7px; -moz-border-radius:7px; border-radius:7px; -khtml-border-radius:7px; }
+#BanneryAnimacjaPrzenikaniePrzyciski span:hover { background:#896a4b; }
+#BanneryAnimacjaPrzenikaniePrzyciski span.On { background:#896a4b; }
+
+/* wysuwane zakladki */
+#wysZakladki { position:fixed; display:block; left:0; }
+/* facebook */
+#fb { width:304px; background:#ffffff; padding:0px; position:fixed; }
+#fb_ikona { position:absolute; width:33px; height:111px; background:url("") no-repeat; }
+#ramkaFb { border:2px solid #0070cf; }
+/* gg */
+#gg { width:230px; background:#dccda2; padding:0px; position:fixed; }
+#gg_ikona { position:absolute; width:33px; height:111px; background:url("") no-repeat; }
+#ramkaGg { border:2px solid #c1c1c1; }
+/* nasza klasa */
+#nk { width:304px; background:#21537f; padding:0px; position:fixed; }
+#nk_ikona { position:absolute; width:33px; height:111px; background:url("") no-repeat; }
+#ramkaNk { border:2px solid #21537f; }
+/* youtube */
+#yt { width:304px; background:#1f1f1f; padding:0px; position:fixed; }
+#yt_ikona { position:absolute; width:33px; height:111px; background:url("") no-repeat; }
+#ramkaYt { border:2px solid #1f1f1f; padding:5px; }
+/* google plus */
+#gp { width:304px; background:#ffffff; padding:0px; position:fixed; }
+#gp_ikona { position:absolute; width:33px; height:111px; background:url("") no-repeat; }
+#ramkaGp { border:2px solid #004f95; }
+/* twitter */
+#tw { width:304px; background:#60b9dd; padding:0px; position:fixed; }
+#tw_ikona { position:absolute; width:33px; height:111px; background:url("") no-repeat; }
+#ramkaTw { border:2px solid #60b9dd; }
+/* allegro */
+#allegro { width:504px; background:#ffffff; padding:0px; position:fixed; }
+#allegro_ikona { position:absolute; width:33px; height:111px; background:url("") no-repeat; }
+#ramkaAg { border:2px solid #ff5602; width:500px; }
+#ramkaAg strong { background:#ff5602; padding:4px 8px 4px 8px; color:#ffffff; display:block; font-size:110%; }
+#ramkaAg strong a { color:#ffffff; font-weight:bold; }
+#ramkaAg .komentarz { padding:8px; }
+#ramkaAg .komentarz:nth-child(odd) { background:#f4f4f4; }
+#ramkaAg span { display:inline-block; margin:0px 3px 0px 3px; }
+#ramkaAg a { color:#0083ff; }
+#ramkaAg .opisKomentarza { margin:8px 0px 0px 0px; }
+#ramkaAg .pozytywny { padding-right:25px; font-weight:bold; color:#009b00; }
+
+/* autopodpowiedzi */
+#Podpowiedzi { border:1px solid #f6c99b; max-height:300px; background:#ffffff; overflow-y:auto; z-index:15000; -moz-border-radius:4x; -webkit-border-radius:4px; border-radius:4px; -khtml-border-radius:4px; }
+#Podpowiedzi .zaznacz { font-weight:bold; color:#ff0000; }
+#Podpowiedzi table { width:100%; }
+#Podpowiedzi td { padding:8px 8px 4px 8px; border-bottom:1px solid #dccda2; }
+#Podpowiedzi td:last-child { text-align:center; }
+#Podpowiedzi td .Cena, #Podpowiedzi td .CenaPromocyjna, #Podpowiedzi td .CenaPoprzednia { font-size:100%; }
+#Podpowiedzi tr:last-child td { border-bottom:0px; }
+#Podpowiedzi tr:hover { background:#f1f1f1; cursor:pointer; }
+
+/* informacja o wylaczonym cookie - nie kasowac !! */
+#BrakCookie { position:fixed; left:50%; top:40%; width:460px; padding:20px; font-weight:bold; background:#ff0000; color:#ffffff; margin:0px auto; margin-left:-220px; z-index:2003; border:10px solid #f3f3f3; text-align:center; }
+
+/* linia pozioma */
+.StrTresc .LiniaPoziom { border-bottom:1px dotted #e9ceb2; }
+
+/* wspolne linie */
+.LiniaPrawa { border-right:1px dotted #e9ceb2; }
+.LiniaDolna { border-bottom:1px dotted #e9ceb2; }
+.LiniaGorna { border-top:1px dotted #e9ceb2; }
+.LiniaCala { border:1px solid #e9ceb2; }
+.LiniaCalaPrzerywana { border:1px dotted #e9ceb2; }
+.LiniaOpisu { border-top:1px dotted #e9ceb2; border-bottom:1px dotted #e9ceb2; }
+
+.ProduktyPopUp { display:table; max-width:700px; border-collapse:collapse; border-spacing:0; margin-top:10px; }
+.ProduktyPopUp strong { display:block; margin:10px; font-size:140%; text-align:center; }
+.ProduktPopUp { display:table-cell; vertical-align:top; text-align:center; padding:15px 5px 15px 5px; }
+.ProduktPopUp h3 { margin:10px 0px 5px 0px; }
+.ProduktPopUp .Zakup { display:inline-block; margin:0px auto; margin-top:10px; }
+.ProduktPopUp .Zakup .IloscProduktu { display:none; }
+.ProduktPopUp .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.ProduktPopUp .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+
+#ZdjeciaProduktu div { margin:10px; text-align:left; }
+#GaleriaZdjeciaAllegro {
+    position:relative;
+    overflow:hidden;
+    display:inline-block;
+    padding:10px;
+    border:1px solid #dbdbdb;
+}
+#GaleriaZdjeciaMiniaturki {
+    text-align:center;
+    padding:10px 0px 10px 0px;
+}
+#GaleriaZdjeciaMiniaturki .GaleriaZdjeciaMiniatura {
+    display:inline-block;
+    padding:5px;
+    margin:5px;
+    cursor:pointer;
+    border:2px solid #cccccc;
+    transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -webkit-transition: all 0.50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+}
+#GaleriaZdjeciaMiniaturki .GaleriaZdjeciaMiniatura:hover {
+    border:2px solid #000000;
+}
+#GaleriaZdjeciaMiniaturki .GaleriaZdjeciaMiniatura span {
+    opacity:0;
+    filter:alpha(opacity=0);
+    position:absolute;
+    left:0px;
+    top:0px;
+    text-align:center;
+    width:100%;
+    transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -webkit-transition: all 0.50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+}
+#GaleriaZdjeciaMiniaturki .GaleriaZdjeciaMiniatura:hover span {
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+#GaleriaZdjeciaMiniaturki .GaleriaZdjeciePierwsze {
+    opacity:1;
+    filter:alpha(opacity=100);
+    position:absolute;
+    left:0px;
+    top:0px;
+    text-align:center;
+    width:100%;
+    transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -webkit-transition: all 0.50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+}
+#GaleriaZdjeciaMiniaturki:hover .GaleriaZdjeciePierwsze {
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+#GaleriaZdjeciaDuze {
+    position:relative;
+    overflow:hidden;
+    padding:10px 0px 10px 0px;
+}
+ 
+.JmCena { font-style:normal; font-size:14px; font-weight:normal; }
+@media only screen and (max-width:1023px) { #LinkLogo { text-align:center; } #LinkLogo .RwdKomputer { display:none; } }
+@media only screen and (min-width:1024px) { #LinkLogo .RwdMobilny { display:none; } } /* wyglad ogolny boxu */
+.BoxNaglowek { background:url("") no-repeat; margin:0px; text-align:center; line-height:60px; color:#000; font-size:160%; font-weight:normal; overflow:hidden; height:60px; }
+.BoxTresc { background:url("") repeat-y; padding:5px 10px 0px 10px; overflow:hidden; }
+.BoxDol { background:url("") no-repeat; height:25px; }
+.BoxTresc .WszystkieKreska { text-align:center; padding:10px 10px 5px 10px; border-top:1px dotted #e9ceb2; }
+.BoxTresc .Wszystkie { text-align:center; margin:10px 10px 5px 10px; }
+.BoxTresc .Wszystkie a, .BoxTresc .WszystkieKreska a { font-weight:bold; display:inline-block; }
+.BoxTresc .SrodekCentrowany { text-align:center; padding:10px; }
+
+/* linki aktualnosci - kalendarz przy dacie */
+.BoxTresc .Lista .Data { background:url("") no-repeat left center; padding:2px 2px 2px 22px; display:block; margin:5px 5px 5px 0px; color:#897560; font-style:normal; font-weight:normal; }
+
+.BezLinii li:last-child { border:0px !important; }
+
+/* definiowanie boxu np dla nasz hit - tylko lista produktow */
+.BoxTresc .Lista h3 a { font-size:110%; }
+.BoxTresc .Lista h4 a { font-weight:bold; }
+.BoxTresc .Lista, .BoxTresc ul { list-style-type: none; padding:0; margin:0; }
+.BoxTresc .Lista li { padding:5px 10px 5px 10px; margin:0px; border-bottom:1px dotted #e9ceb2; }
+.BoxTresc .Lista li a { background:url("") no-repeat left center; padding:3px 10px 3px 25px; display:block; }
+.BoxTresc .Lista li .cena, .BoxTresc .ListaNumer li .cena { display:block; margin-top:5px; text-align:left; }
+.BoxTresc .Lista .OpisText { margin:5px; text-align:left; }
+/* box bestsellery lista z numeracja */
+.BoxTresc .ListaNumer li { display:table; width:100%; padding:5px 0px 5px 0px; border-bottom:1px dotted #e9ceb2; }
+.BoxTresc .ListaNumer a { display:table-cell; padding:3px 0px 3px 0px; }
+.BoxTresc .ListaNumer span { display:table-cell; width:40px; text-align:center; vertical-align:middle; }
+.BoxTresc .ListaNumer b { display:inline-block; color:#ffffff; width:15px; text-align:center; padding:3px 5px 3px 5px; margin-right:6px; background:#896a4b; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -khtml-border-radius:4px; }
+
+/* definiowanie boxu statystyki */
+.BoxTresc .Stat li { padding:5px 10px 5px 10px; margin:0px; border-bottom:1px dotted #e9ceb2; }
+.BoxTresc .Stat li:last-child { border-bottom:0px; }
+.BoxTresc .Stat li b { font-size:110%; }
+
+/* definiowanie boxu np dla nasz hit z miniaturkami 50x50 */
+.BoxTresc .BoxImgMaly li .PrdDane { background:transparent; padding:5px; display:table-cell; vertical-align:top; }
+.BoxTresc .BoxImgMaly li .PrdDane a { margin-bottom:8px; display:block; }
+.BoxTresc .BoxImgMaly li { margin:5px 0px 5px 0px; padding:0px; border-bottom:1px dotted #e9ceb2; display:table; width:100%; }
+.BoxTresc .BoxImgMaly li .Img { display:table-cell; padding:5px; text-align:center; vertical-align:top; }
+.BoxTresc .BoxImgMaly .OpisText { margin:5px 5px 5px 0px; text-align:left; }
+
+/* definiowanie boxu np dla nasz hit z wiekszymi obrazkami */
+.BoxTresc .BoxImgDuzy { text-align:center; border-bottom:1px dotted #e9ceb2; }
+.BoxTresc .BoxImgDuzy a { margin:12px 10px 10px 10px; display:inline-block; }
+.BoxTresc .BoxImgDuzy .Cena, .BoxTresc .BoxImgDuzy .CenaPromocyjna { margin:0px 0px 10px 0px; }
+/* recenzja w boxie, tresc aktualnosci, teksty drobne w boxach */
+.BoxTresc .OpisText { margin:10px; text-align:center; }
+.BoxTresc .OpisText img { margin-top:6px; }
+
+/* definiowanie boxu jezyka */
+.BoxTresc .Flaga { padding:5px; }
+.BoxTresc .FlagaOff { cursor:pointer; opacity:0.6; filter:alpha(opacity=60); }
+
+/* animowane boxy */
+.BoxTresc .BoxAnimacja { text-align:center; position:absolute; margin:0px; z-index:0; }
+.BoxTresc .BoxAnimacjaScroll { text-align:center; position:relative; margin:0px; }
+.BoxTresc .BoxAnimacja a, .BoxTresc .BoxAnimacjaScroll a { padding:7px 10px 10px 10px; display:inline-block; position:relative; }
+.BoxTresc .BoxAnimacja .Cena, .BoxTresc .BoxAnimacja .CenaPromocyjna, .BoxTresc .BoxAnimacjaScroll .Cena, .BoxTresc .BoxAnimacjaScroll .CenaPromocyjna { margin:0px 0px 10px 0px; }
+.BoxTresc .wysImg , .BoxTresc .AktLicz { display:none; }
+.BoxTresc .AnimSzer { min-width:150px; overflow:hidden; }
+.BoxTresc .strzalkaLewa { opacity:0.6; filter:alpha(opacity=60); z-index:2; cursor:pointer; display:none; width:19px; height:32px; background:url("") no-repeat left center; position:absolute; margin-top:0px; margin-left:5px; }
+.BoxTresc .strzalkaPrawa { opacity:0.6; filter:alpha(opacity=60); z-index:2; cursor:pointer; display:none; width:19px; height:32px; background:url("") no-repeat right center; position:absolute; margin-top:0px; margin-left:5px; }
+.BoxTresc .strzalkaLewa:hover { opacity:1; filter:alpha(opacity=100); }
+.BoxTresc .strzalkaPrawa:hover { opacity:1; filter:alpha(opacity=100); }
+.BoxTresc .BoxPrzyciski { margin:10px 0px 10px 0px; text-align:center; }
+.BoxTresc .BoxPrzyciski b { display:inline-block; cursor:pointer; background:#c4a27e; font-family:Arial; margin:0px 2px 0px 2px; padding:2px 6px 2px 6px; color:#ffffff; font-weight:bold; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; -khtml-border-radius:3px; }
+.BoxTresc .BoxPrzyciski b:hover { background:#896a4b; }
+.BoxTresc .BoxPrzyciski .On { background:#896a4b; }
+
+/* box chmura tagow */
+#tagCloud { text-align:center; padding:5px; overflow:hidden; font-size:80%; }
+#tagCloud a { display:inline-block; margin:2px; padding:2px; }
+.tag_0 { font-size:90%; }
+.tag_3 { font-size:120%; }
+.tag_5 { font-size:140%; }
+.tag_10 { font-size:170%; }
+.tag_15 { font-size:190%; }
+.tag_20 { font-size:210%; }
+.tag_50 { font-size:230%; }
+
+/* box standardowy z kategoriami */
+.BoxKategorie { margin-bottom:10px; overflow:hidden; }
+.BoxKategorie ul { list-style-type: none; padding:0; margin:0; }
+.BoxKategorie li { margin:0px; }
+.BoxKategorie a { height:40px; overflow:hidden; line-height:38px; font-size:130%; color:#411301; display:block; text-transform:uppercase; background:url("") no-repeat; padding-left:15px; margin-bottom:3px;
+  transition: all 0.20s ease-in-out;
+	-moz-transition: all 0.20s ease-in-out;
+	-webkit-transition: all 0.20s ease-in-out;
+	-o-transition: all 0.20s ease-in-out;
+}
+.BoxKategorie a:hover { text-decoration:none; color:#000000; padding-left:20px; }
+.BoxKategorie li li a { padding:4px 12px 4px 25px; font-weight:normal; font-size:110%; color:#411301; display:block; height:auto; line-height:1.3; background:transparent; }
+.BoxKategorie li li a:hover { text-decoration:none; color:#000000; padding-left:30px; }
+.BoxKategorie li li li a { padding:4px 12px 4px 40px; }
+.BoxKategorie li li li a:hover { padding-left:45px; }
+.BoxKategorie li li li li a { padding:4px 12px 4px 55px; }
+.BoxKategorie li li li li a:hover { padding-left:60px; }
+.BoxKategorie li li li li li a { padding:4px 12px 4px 70px; }
+.BoxKategorie li li li li li:hover { padding-left:75px; }
+.BoxKategorie em { display:inline-block; margin-left:5px; font-weight:normal; font-style:normal; }
+.BoxKategorie .Aktywna { font-weight:bold; }
+
+/* box kategorii rozwijanych */
+.BoxKategorieRozwijane { margin:-10px 0px 10px 0px; overflow:hidden; background:url("tlo_stopka.jpg"); 
+  -moz-box-shadow: 0 0 20px #7c4b17 inset; -webkit-box-shadow: 0 0 20px #7c4b17 inset; box-shadow: 0 0 20px #7c4b17 inset; overflow:hidden; text-transform:uppercase;
+  -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px; -khtml-border-radius:8px; border:1px solid #82572d; 
+}
+.BoxKategorieRozwijane ul { list-style-type: none; padding:0; margin:0; }
+.BoxKategorieRozwijane li { margin:0px; }
+.BoxKategorieRozwijane a { padding:8px 12px 8px 12px; font-size:120%; color:#411301; display:inline-block; margin-left:25px; }
+.BoxKategorieRozwijane a:hover { text-decoration:none; color:#000000; }
+.BoxKategorieRozwijane li ul { display:none; }
+.BoxKategorieRozwijane li li a { padding:6px 10px 6px 15px; font-weight:normal; color:#411301; display:inline-block; margin:1px 0px 1px 20px; }
+.BoxKategorieRozwijane li li a:hover { text-decoration:none; color:#000000; }
+.BoxKategorieRozwijane li li li a { margin-left:37px; }
+.BoxKategorieRozwijane li li li li a { margin-left:54px; }
+.BoxKategorieRozwijane li li li li li a { margin-left:71px; }
+.BoxKategorieRozwijane em { display:inline-block; margin-left:5px; font-weight:normal; font-style:normal; }
+.BoxKategorieRozwijane .Aktywna { font-weight:bold; }
+.BoxKategorieRozwijane h2 { border-bottom:1px dotted #82572d; }
+.BoxKategorieRozwijane .Rozwin { position:absolute; display:inline-block; cursor:pointer; width:16px; height:16px; margin:8px 5px 5px 10px; }
+.BoxKategorieRozwijane .Plus { background:url("") no-repeat right center; }
+.BoxKategorieRozwijane .Minus { background:url("") no-repeat right center; }
+
+/* box kategorii wysuwanych */
+.BoxKategorieWysuwane { margin:-10px 0px 10px 0px; overflow:hidden; background:url("tlo_stopka.jpg"); 
+  -moz-box-shadow: 0 0 20px #7c4b17 inset; -webkit-box-shadow: 0 0 20px #7c4b17 inset; box-shadow: 0 0 20px #7c4b17 inset; overflow:hidden; text-transform:uppercase;
+  -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px; -khtml-border-radius:8px; border:1px solid #82572d; 
+}
+.BoxKategorieWysuwane ul { list-style-type: none; padding:0; margin:0; }
+.BoxKategorieWysuwane li { margin:0px; }
+.BoxKategorieWysuwane a { padding:8px 12px 8px 12px; font-size:120%; color:#411301; display:block; border-bottom:1px dotted #82572d; }
+.BoxKategorieWysuwane a:hover { text-decoration:none; color:#000000; }
+.BoxKategorieWysuwane li ul { display:none; position:absolute; margin:-15px 0px 0px 160px; width:200px; background:url("tlo_stopka.jpg"); z-index:10000; border:1px solid #82572d; 
+  -moz-box-shadow: 0 0 20px #9b6c39 inset; -webkit-box-shadow: 0 0 20px #9b6c39 inset; box-shadow: 0 0 20px #9b6c39 inset; text-transform:uppercase;
+  -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px; -khtml-border-radius:8px;
+}
+.BoxKategorieWysuwane li li a { padding:5px 25px 5px 10px; font-weight:normal; border:0px; }
+.BoxKategorieWysuwane em { display:inline-block; margin-left:5px; font-weight:normal; font-style:normal; }
+.BoxKategorieWysuwane a.Rozwin { background:url("") no-repeat right center; }
+
+/* box porownywarki produktow */
+.BoxPorownywarka { padding:10px; }
+.BoxPorownywarka a { display:block; margin-left:25px; }
+#ListaProduktowPorownanieBox span { background:url("") no-repeat left center; width:16px; height:16px; margin:0px 10px 0px 0px; float:left; cursor:pointer; display:inline-block; }
+#ListaProduktowPorownanieBox { list-style-type: none; padding:0; margin:0; }
+#ListaProduktowPorownanieBox li { margin-bottom:8px; }
+.BoxPorownywarka #przyciskPorownywaniaBox { margin-top:15px; text-align:center; }
+
+/* box schowka */
+.BoxSchowek { padding:10px; text-align:center; line-height:1.2 }
+.BoxSchowek .Cena { display:inline-block; }
+.BoxSchowek .WartoscSchowka { margin:0px auto; margin-top:5px; margin-bottom:15px; display:table; border-collapse: collapse; border-spacing:0; }
+.BoxSchowek .WartoscSchowka div { display:table-cell; padding:0px 3px 0px 3px; vertical-align:middle; }
+
+/* box koszyka - szczegolowy */
+.BoxKoszykSzczegoly { line-height:1.2 }
+.BoxKoszykSzczegoly ul { list-style-type: none; padding:0; margin:0; }
+.BoxKoszykSzczegoly li { border-bottom:1px dotted #e9ceb2; text-align:left; margin:5px 0px 5px 0px; display:table; width:100%; }
+.BoxKoszykSzczegoly li .PrdDane { padding:5px; display:table-cell; vertical-align:top; }
+.BoxKoszykSzczegoly li .PrdDane a { font-weight:bold; }
+.BoxKoszykSzczegoly li .PrdDane .Cena { margin-top:5px; }
+.BoxKoszykSzczegoly li .Img { display:table-cell; padding:5px; text-align:center; vertical-align:top; }
+.BoxKoszykSzczegoly .Podsumowanie { margin:0px auto; margin-top:15px; display:table; border-collapse: collapse; border-spacing:0; }
+.BoxKoszykSzczegoly .Podsumowanie div { display:table-cell; padding-right:5px; vertical-align:middle; }
+.BoxKoszykSzczegoly .PrzyciskKoszyk { margin:15px 0px 7px 0px; text-align:center; }
+.BoxKoszykSzczegoly .PustyKoszyk { display:block; margin:10px; text-align:center; }
+
+/* box reklamacji */
+.BoxReklamacja { padding:10px; text-align:left; line-height:1.5 }
+.BoxReklamacja span { font-size:110%; font-weight:bold; }
+.BoxReklamacja ul { list-style-type: none; padding:0; margin:0; }
+.BoxReklamacja li { margin:0px; }
+.BoxReklamacja a { padding:2px 5px 2px 5px; font-weight:normal; display:block; }
+
+/* box newsletter */
+.BoxNewsletter { padding:10px; text-align:center; line-height:1.2; }
+.BoxNewsletter .NewsletterOpis { background:url("") no-repeat left center; padding-left:55px; text-align:left; }
+.BoxNewsletter .PoleAdresu { margin:15px 0px 15px 0px; }
+.BoxNewsletter #emailNewsletter { width:95%; margin:0px auto; }
+
+/* definiowanie boxu waluty */
+.BoxTresc .Waluty { text-align:center; padding:10px 0px 0px 0px; }
+
+/* box ankiet */
+.BoxTresc .Ankieta { padding:10px; text-align:center; }
+.BoxTresc .Ankieta h4 { display:block; margin-bottom:10px; }
+.BoxTresc .Ankieta .Pytania { display:inline-block; margin:0px auto; text-align:left !important; list-style-type: none; padding:0; }
+.BoxTresc .Ankieta .Pytania input { float:left; margin:0px 5px 0px 0px !important; }
+.BoxTresc .Ankieta .Pytania li { text-align:left; margin-bottom:5px; }
+.BoxTresc .Ankieta .Pytania li b { margin-left:20px; font-weight:normal; display:block; }
+.BoxTresc .Ankieta #BladAnkiety { display:inline-block; margin:0px auto; font-weight: normal; background:transparent url("") no-repeat left center; margin:10px 0px 0px 0px; padding:2px 0px 2px 25px; }
+.BoxTresc .Ankieta div { margin-top:10px; }
+
+/* box cennika */
+.BoxTresc .Cennik { text-align:center; }
+.BoxTresc .Cennik a { display:inline-block; margin:10px 5px 10px 5px; }
+
+/* box producenci chmura tekst */
+.BoxTresc .ProducenciChmura a { display:inline-block; margin:5px; }
+
+/* box producenci - przewijana lista */
+.BoxTresc .ProducenciLista { overflow-y:auto; }
+.BoxTresc .ProducenciLista a { display:block; margin:5px 5px 5px 10px; }
+
+/* definiowanie boxu z miniaturka i opisem */
+.BoxTresc .BoxImgTekst { text-align:left; border-bottom:1px dotted #e9ceb2; padding:8px 5px 10px 5px; }
+.BoxTresc .BoxImgTekst img { float:left; margin-right:12px; margin-bottom:8px; }
+.BoxTresc .BoxImgTekst h3 { margin-bottom:8px; }
+
+/* box wyszukiwania */
+.BoxWyszukiwania { margin:10px; padding-right:55px; text-align:center; line-height:1.2; background:url("") no-repeat right center; }
+.BoxWyszukiwania .PoleFrazy { margin-top:8px; }
+.BoxWyszukiwania #InBoxSzukaj { width:90%; margin:0px auto; }
+.SzukZaawansowane { border-top:1px dotted #e9ceb2; display:block; margin:15px 0px 5px 0px; padding-top:8px; text-align:center; }
+
+/* box z grafikami, bannerami */
+.BoxTresc .Grafiki { list-style-type: none; padding:0; margin:0; }
+.BoxTresc .Grafiki li { padding:10px; margin-bottom:8px; text-align:center; }
+.BoxTresc .Grafiki span { cursor:pointer; }
+.BoxTresc .Reklamy { list-style-type: none; padding:0; margin:0; }
+.BoxTresc .Reklamy li { margin-bottom:8px; text-align:center; overflow: hidden; }
+
+/* box kontakt */
+.BoxTresc .BoxKontakt { list-style-type: none; padding:0; margin:0; }
+.BoxTresc .BoxKontakt li { padding:5px 10px 5px 10px; margin:0px; border-bottom:1px dotted #e9ceb2; }
+.BoxTresc .BoxKontakt li:last-child { border:0px; }
+.BoxTresc .BoxKontakt li b { display:block; margin-bottom:5px; }
+.BoxTresc .BoxKontakt .Firma { line-height:1.5; }
+.BoxTresc .BoxKontakt .Firma strong { display:block; margin-bottom:5px; font-size:110%; }
+.BoxTresc .BoxKontakt .Iko { line-height:1.7; }
+.BoxTresc .BoxKontakt .Iko b { padding-left:25px; background:url("") no-repeat; height:20px; line-height:20px; }
+.BoxTresc .BoxKontakt .Mail b { background-position:0px -20px; }
+.BoxTresc .BoxKontakt .Tel b { background-position:0px 0px; }
+.BoxTresc .BoxKontakt .Fax b { background-position:0px -40px; }
+.BoxTresc .BoxKontakt .Gg b { background-position:0px -60px; }
+.BoxTresc .BoxKontakt .Skype b { background-position:0px -80px; }
+.BoxTresc .BoxKontakt .Godziny b { background-position:0px -100px; }
+
+/* box filtrow */
+.BoxTresc #filtrBox { margin:5px; }
+.BoxTresc .ZakresCen { padding:5px 0px 10px 5px; border-bottom:1px dotted #e9ceb2; }
+.BoxTresc .ZakresCen b { display:block; margin:0px 5px 0px 0px; padding-bottom:10px; font-size:110%; }
+.BoxTresc .ZakresCen input { margin:0px 5px 0px 5px; }
+.BoxTresc .Multi { padding:5px 0px 10px 0px; border-bottom:1px dotted #e9ceb2; }
+.BoxTresc .Multi span { display:block; padding:5px; font-size:110%; }
+.BoxTresc .Multi b.Wlaczony { background:url("") no-repeat left center; padding-left:25px; font-weight:bold; }
+.BoxTresc .Multi .Wybor { white-space:nowrap; z-index:999; overflow-y:auto; overflow-x:hidden; max-height:200px; margin:5px; }
+.BoxTresc strong { color:#97724c; display:block; margin:10px 0px 8px 0px; font-size:110%; }
+.BoxTresc #filtryWyswietl a { display:block; font-weight:bold; font-size:110%; background:url("") no-repeat right center; margin:10px 5px 0px 5px; padding:2px 20px 2px 2px; }
+.BoxTresc #filtryWyswietl a:hover { color:#71563b; }
+.BoxTresc .cl { float:none !important; }
+.BoxTresc #filtryWyswietl { text-align:right; }
+.BoxTresc #filtryWyswietl input { margin-top:10px; }
+ 
+ .BoxKategorie li a span { display:table-cell; vertical-align:middle; }
+.BoxKategorie li a span:last-child { padding-left:8px; }
+.BoxKategorieRozwijane li a span { display:table-cell; vertical-align:middle; }
+.BoxKategorieRozwijane li a span:last-child { padding-left:8px; }
+.BoxKategorieWysuwane li a span { display:table-cell; vertical-align:middle; }
+.BoxKategorieWysuwane li a span:last-child { padding-left:8px; }/* wyglad produktu no 1 */
+.ProduktProsty { display: table-cell; vertical-align:top; text-align:center; padding:10px 5px 2px 5px; }
+.ProduktProsty:last-child { border-right:0px; }
+.ProduktProsty h3 { text-align:left; margin-left:10px; }
+.ProduktProsty .Foto { display:table-cell; vertical-align:middle; }
+.ProduktProsty .Foto a { padding:0px !important; position:relative; }
+.ProduktProsty .Zdjecie { margin:0px 0px 10px 0px; }
+.ProduktProsty .Opis { text-align:left; display:block; margin:2px 10px 10px 10px !important; line-height:1.5; font-size:90%; }
+.ProduktProsty .DataDostepnosci { text-align:center; display:block; margin:10px !important; padding:10px 10px 5px 10px; }
+.ProduktProsty .DataDostepnosci b { text-align:center; display:block; margin:5px; font-size:110%; }
+.ProduktProsty .Zakup { display:inline-block; margin:0px auto; margin-top:20px; }
+.ProduktProsty .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.ProduktProsty .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+/* wyskakujacy z gory napis zobacz szczegoly z lupa */
+.ProduktProsty .AnimacjaZobacz { overflow:hidden; position:relative; }
+.ProduktProsty a { padding:7px 10px 10px 0px; display:inline-block; }
+.ProduktProsty .Zobacz { margin:-60px 0px 0px 0px; position:absolute; display:none; z-index:100; }
+.ProduktProsty .Zobacz strong { margin:0px auto; width:95%; display:none; background:url("tlo_zobacz_szczegoly_modul.png") repeat-x; 
+                                    -moz-box-shadow: 0 8px 6px -6px #928374; -webkit-box-shadow: 0 8px 6px -6px #928374; box-shadow: 0 8px 6px -6px #928374; 
+                                    -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.ProduktProsty .Zobacz a { color:#71563b; font-weight:bold; background:url("lupa_modul.png") no-repeat left center; margin-left:10px; padding:15px 10px 10px 30px !important; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; }
+.ProduktProsty .Zobacz a:hover { color:#896a4b; }
+.ProduktProsty .Poly { display:table-cell; vertical-align:middle; text-align:center; width:50%; }
+
+/* przyciski do modulu wszystkich produktow */
+#LadowanieWszystkie { display:none; z-index:100; position:absolute; width:100px; height:150px; background:url("") no-repeat center center; }
+#WszystkieProdukty { z-index:1; }
+#WszystkieProdukty .SekcjaRowna:nth-last-child(2) { border-bottom:0px; }
+#WszystkieProdukty .ModulPrzyciski { margin:20px 0px 10px 0px; text-align:center; }
+#WszystkieProdukty .ModulPrzyciski b { display:inline-block; cursor:pointer; background:#c4a27e; font-family:Arial; margin:0px 2px 0px 2px; padding:4px 6px 6px 6px; color:#ffffff; font-weight:bold; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; -khtml-border-radius:4px; }
+#WszystkieProdukty .ModulPrzyciski b:hover { background:#896a4b; }
+#WszystkieProdukty .ModulPrzyciski .On { background:#896a4b; }
+#WszystkieProdukty .ModulPrzyciski span { display:inline-block; margin:0px 5px 0px 5px; font-weight:bold; }
+
+/* wyglad produktu no 2 */
+.ProduktZlozony { display: table-cell; vertical-align:top; text-align:center; padding:10px 5px 5px 5px; }
+.ProduktZlozony:last-child { border-right:0px; }
+.ProduktZlozony .Foto { float:left; margin-left:15px; }
+.ProduktZlozony .ProdCena { text-align:left; padding-right:5px; }
+.ProduktZlozony .ProdCena a { padding:0px 10px 10px 0px; display:inline-block; }
+.ProduktZlozony .Opis { text-align:left; display:block; margin:10px !important; padding:5px; }
+.ProduktZlozony .Opis .Dostepnosc { font-style:normal; display:block; padding:5px 0px 5px 0px; font-weight:bold; }
+.ProduktZlozony .Opis .Dostepnosc em { font-style:normal; font-weight:normal; }
+.ProduktZlozony .ProdCena .Producent { margin-top:8px; display:block; }
+.ProduktZlozony .ProdCena .Producent a { font-weight:bold; }
+.ProduktZlozony .ProdCena .Producent em { font-style:normal; font-weight:normal; }
+.ProduktZlozony .cl { height:10px; }
+.ProduktZlozony .Ocena { text-align:left; margin-top:10px; line-height:1.5; }
+.ProduktZlozony .Ocena img { display:block; margin:5px 0px 5px 0px; }
+.ProduktZlozony .Ocena strong { display:inline-block; margin-left:3px; font-size:110%; }
+.ProduktZlozony .Zakup { display:inline-block; margin-top:5px; }
+.ProduktZlozony .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.ProduktZlozony .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+
+/* wyglad produktu no 3 - modul promocje z zegarem */
+.ProduktWiersz { margin-bottom:5px; position:relative; padding-top:10px; }
+.ProduktWiersz .Foto { float:left; margin:5px 0px 0px 15px; }
+.ProduktWiersz .ProdOpis { text-align:left; margin:5px 40px 10px 0px; }
+.ProduktWiersz .ProdOpis a { padding:0px 10px 10px 0px; display:inline-block; }
+.ProduktWiersz .Zdjecie { margin:0px 0px 10px 0px; }
+.ProduktWiersz .OpisKrotki { margin:10px 0px 10px 0px; display:block; }
+.ProduktWiersz .Odliczanie { display:block; text-align:left; font-size:110%; color:#d6000a; font-weight:bold; margin:12px 0px 8px 0px; }
+.ProduktWiersz .Odliczanie span { display:block; color:#896a4b; margin-bottom:5px; font-size:19px; font-weight:bold; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; }
+.ProduktWiersz .Odliczanie span em { display:inline-block; background:#896a4b; color:#ffffff; font-style:normal; padding:2px 5px 2px 5px; margin:1px; 
+                                  -webkit-border-radius:4px; -moz-border-radius:4px; border-radius: 4px; -khtml-border-radius:4px; }
+.ProduktWiersz .Bestseller_pl { right:0px; top:0px; position:absolute; background:url("") no-repeat; width:185px; height:111px; }
+.ProduktWiersz .Bestseller_en { right:0px; top:0px; position:absolute; background:url("") no-repeat; width:185px; height:111px; }
+.ProduktWiersz .Zakup { margin-right:10px; }
+.ProduktWiersz .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.ProduktWiersz .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+
+/* wyglad kategorii na stronie glownej */
+.KategoriaGl { display:table-cell; vertical-align:top; text-align:left; padding:5px 8px 10px 8px; }
+.KategoriaGl:last-child { border-right:0px; }
+.KategoriaGl .Kategoria { margin-right:60px; font-size:110%; }
+.KategoriaGl h3 a { padding:7px 10px 10px 3px; display:inline-block; }
+.KategoriaGl .Foto { float:right; }
+.KategoriaGl .Zdjecie { margin:0px 0px 10px 0px; }
+.KategoriaGl ul { list-style-type: none; padding: 0; margin: 0; }
+.KategoriaGl li { margin:0px; }
+.KategoriaGl li a { background:url("") no-repeat left center; display:block; padding:3px 10px 3px 24px; }
+.KategoriaPusta { display:table-cell; }
+
+/* wyglad producentow na stronie glownej */
+#ProducenciAnimacja { margin:10px 28px 10px 28px; overflow:hidden; }
+#ProducenciAnimacjaStrzalkaLewa { display:none; opacity:0.6; filter:alpha(opacity=60); cursor:pointer; float:left; width:28px; height:30px; margin-top:30px; background:url("") no-repeat center center; }
+#ProducenciAnimacjaStrzalkaLewa:hover { opacity:1; filter:alpha(opacity=100); }
+#ProducenciAnimacjaStrzalkaPrawa { opacity:0.6; filter:alpha(opacity=60); cursor:pointer; float:right; width:28px; height:30px; margin-top:30px; background:url("") no-repeat center center; }
+#ProducenciAnimacjaStrzalkaPrawa:hover { opacity:1; filter:alpha(opacity=100); }
+#ProducenciAnimacjaSrodek ul { list-style-type: none; padding: 0; margin: 0; display:table; border-collapse:collapse; border-spacing:0; }
+#ProducenciAnimacjaSrodek li { display:table-cell; vertical-align:middle; text-align:center; margin:0px; }
+
+/* wyglad bannerow statycznych */
+.BanneryStatyczne { display:block; text-align:center; margin:5px; }
+
+/* wyglad modulu produktow z jedynym zdjeciem */
+.ProduktZdjecieLista { display:table; width:100%; border-collapse:collapse; border-spacing:0; }
+.ProduktZdjecieLista .FotoJedno { display:table-cell; vertical-align:middle; text-align:left; padding-left:30px; }
+.ProduktZdjecieLista .FotoJedno ul { list-style-type:none; padding:0px; }
+.ProduktZdjecieLista .FotoJedno li { display:none; }
+.ProduktZdjecieLista .FotoJedno li:first-child { display:block; }
+.ProduktZdjecieLista .NazwyProduktow { display:table-cell; vertical-align:middle; text-align:left; }
+.ProduktZdjecieLista .NazwyProduktow h3 { display:table; width:100%; border-bottom:1px dotted #e9ceb2; }
+.ProduktZdjecieLista .NazwyProduktow h3:last-child { border-bottom:0px; }
+.ProduktZdjecieLista .NazwyProduktow h3 .wyswietlany { color:#71563b; }
+.ProduktZdjecieLista .NazwyProduktow a { padding:6px 10px 6px 10px; display:table-cell; vertical-align:middle; text-align:left; }
+.ProduktZdjecieLista .NazwyProduktow .Ceny { vertical-align:middle; display:table-cell; padding:6px 10px 6px 0px; text-align:right; }
+
+/* modul animowany - przewijane produkty lewo / prawo lub przenikanie */
+.AnimModul ul { list-style-type:none; padding:0px; width:100%; }
+.AnimModul li { float:left; width:100%; overflow:hidden; }
+.AnimModul li:first-child { display:block; }
+.AnimModul .StronyAnim { float:right; padding:4px 2px 4px 2px; display:inline-block; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px; border-radius:5px; }
+.AnimModul .StronyAnim b { background:#c4a27e; font-family:Arial; margin:0px 2px 0px 2px; padding:3px 7px 3px 7px; display:inline-block; cursor:pointer; color:#ffffff; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.AnimModul .StronyAnim b:hover { background:#896a4b; }
+.AnimModul .StronyAnim b.On { background:#896a4b; }
+
+/* modul animowany - jeden produkt na cala szerokosc szeroki na cala kolumne - przenikanie - hity */
+.AnimModulJeden { list-style-type:none; padding:0px; margin:0px; overflow:hidden; }
+.AnimModulJeden .Kont { margin:0px 5px 0px 5px; display:table; width:100%; border-collapse:collapse; border-spacing:0; }
+.AnimModulJeden .Foto { display:table-cell; vertical-align:top; padding:5px 0px 0px 15px; }
+.AnimModulJeden .ProdOpis { display:table-cell; vertical-align:top; text-align:left; padding:5px 20px 0px 20px; }
+.AnimModulJeden .ProdOpis a { font-size:19px; font-weight:normal; padding:0px 10px 10px 0px; display:inline-block; }
+.AnimModulJeden .Zdjecie { margin:0px 0px 10px 0px; }
+.AnimModulJeden .OpisKrotki { margin:5px 0px 10px 0px; display:block; }
+.AnimModulJeden .Zakup { display:block; margin-top:10px; }
+.AnimModulJeden .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.AnimModulJeden .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+
+/* modul animowany - jeden produkt na cala szerokosc szeroki na cala kolumne - przenikanie - promocje */
+.AnimModulJeden .FotoPrawe { float:right; margin:5px 15px 0px 15px; }
+.AnimModulJeden .ProdOpisSrodek { text-align:left; margin:5px 20px 0px 10px; }
+.AnimModulJeden .ProdOpisSrodek a { font-size:22px; font-weight:normal; padding:0px 10px 10px 0px; display:inline-block; }
+.AnimModulJeden .ProdOpisSrodek .Znikanie { position:relative; margin:0px; }
+.AnimModulJeden .FotoPrawe .Skakanie { position:relative; margin:0px; }
+.AnimModulJeden .FotoPrawe .Zdjecie { border:0px; -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none; }
+
+.ModulPrzyciski { text-align:right; }
+.ModulPrzyciskiSrodek { text-align:center; }
+.ModulPrzyciski b, .ModulPrzyciskiSrodek b { display:inline-block; cursor:pointer; background:#c4a27e; font-family:Arial; margin:0px 2px 0px 2px; width:12px; height:12px; color:#ffffff; -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px; -khtml-border-radius:6px; }
+.ModulPrzyciski b:hover, .ModulPrzyciskiSrodek b:hover { background:#896a4b; }
+.ModulPrzyciski .On, .ModulPrzyciskiSrodek .On { background:#896a4b; }
+
+/* producenci chmura */
+.ProducenciChmuraModul { text-align:center; }
+.ProducenciChmuraModul a { display:inline-block; margin:5px; font-size:130%; }
+
+/* aktualnosci na stronie glownej */
+.AktProsta { display:table-cell; vertical-align:top; text-align:left; position:relative; padding:10px; }
+.AktProsta:last-child { border-right:0px; }
+.AktProsta h2 { text-align:right; }
+.AktProsta h2 a { text-align:left; padding:0px; display:block; margin-bottom:5px; font-weight:bold; font-size:110%; }
+.AktProsta .DaneAktualnosci { float:none; text-align:left; margin-bottom:8px; display:block; }
+.AktProsta .DaneAktualnosci em { display:inline-block; margin:2px 2px 2px 0px; padding-right:15px; color:#97724c; font-style:normal; }
+.AktProsta .DataDodania { background:url("") no-repeat left center; padding:2px 0px 2px 22px; }
+.AktProsta .IloscOdslon { padding:0px; }
+
+/* ostatnio ogladane - modul staly - przyklejony */
+#PrzyklejOstatnieProd { position:fixed; left:0px; bottom:0px; width:100%; background:#311a02; border-top:1px solid #ffffff; z-index:1002; opacity:0.5; filter:alpha(opacity=50); text-align:center; }
+#PrzyklejOstatnieProd .Rozwiniecie { cursor:pointer; background:url("") no-repeat left center; padding:12px 10px 12px 35px; display:inline-block; font-size:110%; color:#ffffff; font-weight:bold; }
+#PrzyklejOstatnieProd .Zamknij { left:0px; position:absolute; margin:10px; cursor:pointer; background:url("zamknij.png") no-repeat left center; width:20px; height:20px; display:inline-block; }
+#PrzyklejOstatnieProd ul { display:none; list-style-type: none; padding:0px 0px 10px 0px; margin:0px; }
+#PrzyklejOstatnieProd li { margin:0px; text-align:center; }
+#PrzyklejOstatnieProd li a { color:#ffffff; font-weight:normal; font-size:110%; margin:4px 0px 4px 0px; display:inline-block; }
+#PrzyklejOstatnieProd li a:hover { text-decoration:underline; }
+
+/* informacje o cookie - modul staly - przyklejony */
+#InfoCookie { position:fixed; left:0px; bottom:0px; padding:10px 0px 10px 0px; width:100%; background:#311a02; color:#dccda2; border-top:1px solid #ffffff; z-index:10003; opacity:0.9; filter:alpha(opacity=90); text-align:center; }
+#InfoCookie .CookieTekst { font-size:110%; }
+#InfoAkcept { background:url("zamknij.png") no-repeat left center; display:inline-block; cursor:pointer; color:#ffffff; padding:7px 0px 7px 27px; }
+
+/* blokada 18 + - modul staly - przyklejony */
+#Blokada18 { position:fixed; left:0px; top:0px; width:100%; height:100%; background:#000000; z-index:1002; opacity:0.8; filter:alpha(opacity=80); }
+#BlokadaOkno { position:fixed; left:50%; top:30%; width:500px; background:#ffffff; margin:0px auto; margin-left:-250px; z-index:1003; border:4px solid #311a02; -moz-border-radius:12px; -webkit-border-radius:12px; border-radius:12px; -khtml-border-radius:12px; text-align:center; }
+#BlokadaOkno strong { background:url("") no-repeat left center; font-size:110%; color:#ff0000; display:inline-block; padding:25px 25px 25px 55px; text-align:center; }
+#BlokadaOkno .BlokadaTekst { line-height:1.5; text-align:center; margin:0px 30px 0px 30px; }
+#BlokadaOkno .BlokadaPrzyciski { padding:25px 0px 25px 0px; }
+#BlokadaOkno .BlokadaPrzyciski .przycisk18plus { cursor:pointer; padding:5px 12px 5px 12px; font-weight:bold; font-size:110%; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px; border-radius:5px; }
+#BlokadaOkno .BlokadaPrzyciski .przycisk18plus:hover { color:#ffffff; background:#897560; }
+#BlokadaOkno .BlokadaPrzyciski .wejdz { background:#d6000a; color:#ffffff; }
+#BlokadaOkno .BlokadaPrzyciski .zrezygnuj { background:#c4a27e; color:#ffffff; }
+#BlokadaOkno .BlokadaPrzyciski span { margin:0px 5px 0px 5px; }
+
+/* informacja na gorze sklepu */
+#InfoTop { position:fixed; left:0px; top:0px; width:100%; background:#d6000a; border-bottom:2px solid #ffffff; z-index:1005; opacity:0.8; filter:alpha(opacity=80); text-align:center; }
+#InfoTop span { background:url("") no-repeat left center; font-size:110%; color:#ffffff; display:inline-block; padding:25px 25px 25px 55px; }
+
+/* newsletter popup */
+#InfoNewsletter { position:fixed; left:0px; top:0px; width:100%; height:100%; background:#000000; z-index:1002; opacity:0.8; filter:alpha(opacity=80); }
+#InfoNewsletterOkno { position:fixed; left:50%; top:35%; width:460px; padding:20px; background:#ffffff; margin:0px auto; margin-left:-250px; z-index:1003; border:4px solid #242424; -moz-border-radius:12px; -webkit-border-radius:12px; border-radius:12px; -khtml-border-radius:12px; text-align:center; }
+#InfoNewsletterOkno h4 { margin:10px 0px 15px 0px; font-size:140%; }
+#InfoNewsletterOkno b { font-size:120%; }
+#InfoNewsletterOkno small { margin:10px 0px 10px 0px; }
+#InfoNewsletterOkno #newsletterPopup { margin:15px 0px 10px 0px; }
+#InfoNewsletterOkno #NewsletterZamknij { cursor:pointer; float:right; color:#fff; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; font-size:11px; width:30px; height:15px; }
+#InfoNewsletterOkno #NewsletterZamknij span { position:absolute; margin:-30px 0px 0px 0px; right:-15px; width:30px; height:30px; background:url(""); display:inline-block; }
+#InfoNewsletterOkno p { text-align:center; margin:10px 0px 0px 0px; }
+#InfoNewsletterOkno #emailNewsletterPopup { font-size:120%; padding:10px; width:300px; text-align:center; }
+#InfoNewsletterOkno #submitNewsletterPopup { font-size:110%; padding:7px 30px 7px 30px; }
+#InfoNewsletterOkno #BladDanych { display:none; }
+#InfoNewsletterOkno #BladDanych span { max-width:300px; text-align:left; color:#ff0000; font-size:110%; font-weight:normal; background:transparent url("") no-repeat left center; display:inline-block; margin:10px 0px 0px 0px; padding:2px 0px 2px 25px; }
+#InfoNewsletterOkno #BladDanych strong { text-align:center; color:#ff0000; font-size:120%; font-weight:normal; display:inline-block; margin:10px 0px 10px 0px; }
+#InfoNewsletterOkno #ZgodaPopup { margin:10px 0px 5px 0px; font-size:80%; opacity:0.6; filter:alpha(opacity=60); }/* producenci */
+.Producenci .ProducentTbl { display:table; border-collapse: collapse; border-spacing:0; width:100%; }
+.Producenci .ProducentTbl:last-child { border-bottom:0px; }
+.Producenci .Producent { display:table-cell; vertical-align:top; padding:5px 0px 10px 0px; text-align:center; }
+.Producenci .Producent:last-child { border-right:0px; }
+.Producenci .Producent h3 { margin:10px 0px 5px 0px; }
+.Producenci .Producent em { display:inline-block; margin-left:5px; font-weight:normal; font-style:normal; color:#a79282; }
+
+/* recenzje - szczegoly pojedynczej recenzji oraz napisanie recenzji */
+.StrTresc .Recenzja .OpisTekst { line-height:1.5; }
+.StrTresc .Recenzja p { margin-bottom:10px; display:block; }
+.StrTresc .Recenzja .Przyciski a { margin:10px 10px 0px 0px; }
+.StrTresc .Recenzja .OpisTekst b { font-weight:normal; display:inline-block; margin:1px 0px 0px 6px; vertical-align:top; }
+
+/* ankieta - wyniki szczegolowe ankiety */
+.StrTresc .Odpowiedzi { margin:0px auto; }
+.StrTresc .Odpowiedzi td { padding:5px; }
+.StrTresc .Slupek { width:180px; }
+.StrTresc .Slupek div { background:#896a4b; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; width:100px; height:19px; }
+.StrTresc .Odpowiedz { text-align:right; }
+.StrTresc .Odpowiedz strong { display:inline-block; margin-right:5px; }
+.StrTresc .sumaGlosow { text-align:center; }
+
+/* wyszukiwanie zaawansowane */
+#WyszukiwanieZaawansowane .WyszukajFraze { color:#422503; font-size:110%; padding:10px 15px 10px 15px; margin:0px 0px 20px 0px; background:url("tlo_stopka.jpg"); -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; -moz-box-shadow: 0 0 10px #7c4b17 inset; -webkit-box-shadow: 0 0 10px #7c4b17 inset; box-shadow: 0 0 10px #7c4b17 inset; }
+#WyszukiwanieZaawansowane .WyszukajFraze #SzukanaFraza { font-size:110%; }
+#WyszukiwanieZaawansowane p { display:block; margin:10px 5px 0px 15px; }
+#WyszukiwanieZaawansowane p b { display:inline-block; margin-top:2px; font-weight:normal; width:250px; float:left; }
+#WyszukiwanieZaawansowane .Wybor b { display:inline-block; margin-top:6px; font-weight:normal; width:250px; float:left; }
+
+/* wynik wyszukiwania */
+#WynikWyszukiwania { color:#422503; padding:10px 15px 10px 15px; margin:0px 0px 20px 0px; background:url("tlo_stopka.jpg"); -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; -moz-box-shadow: 0 0 10px #7c4b17 inset; -webkit-box-shadow: 0 0 10px #7c4b17 inset; box-shadow: 0 0 10px #7c4b17 inset; }
+#WynikWyszukiwania p { display:none; margin:8px 5px 8px 0px; }
+#WynikWyszukiwania p:nth-child(2) { display:block; }
+#WynikWyszukiwania p span { display:inline-block; font-weight:normal; margin-right:5px; }
+#WynikWyszukiwania p b { color:#000000; display:inline-block; font-size:110%; }
+#WynikWyszukiwania .przycisk { margin:5px 0px 5px 0px; }
+
+/* tabelka w panelu klienta */
+.TabelaKlient { margin:0px; padding:0px; width:100%; }
+.TabelaKlient table { width:100%; margin:0px; padding:0px; }
+.TabelaKlient td, .TabelaKlient th { text-align:left; padding:5px; vertical-align:middle; border:1px solid #dccda2; border-width:0px 1px 1px 1px; }
+.TabelaKlient .Naglowek th { padding:10px 5px 10px 5px; color:#ffffff; background:#896a4b; text-align:center !important; font-weight:bold; }
+.TabelaKlient .Centruj td { text-align:center; }
+.TabelaKlient td .Cena { font-style: normal; }
+.PodsumowanieWartosc .Cena { font-weight: bold; }
+.GrafikaBanneru td { padding:15px 0px 15px 0px; text-align:center; }
+
+/* select w panelu klienta dotyczacy punktow */
+.SelectPunkty { margin: 15px 5px 10px; }
+
+/* wyglad panelu klienta */
+.StrTresc .SekcjaTbl { margin:0px 0px 8px 5px; display:table; width:100%; line-height:1.5; border-collapse: collapse; border-spacing:0; }
+.StrTresc .Sekcja { margin:0px 0px 0px 5px; }
+.StrTresc .Sekcja .TytulSekcji, .StrTresc .SekcjaTbl .TytulSekcji { background: url("") no-repeat scroll left center transparent; font-size:110%; display:block; font-weight:bold; margin:0; padding-left:35px; margin-top:10px; text-decoration: none; line-height:36px; }
+.StrTresc .Sekcja .TrescSekcji { background: url("") no-repeat scroll left center transparent; font-weight: normal; margin:7px;margin-left: 35px; padding-left: 25px; text-decoration: none; line-height:16px; }
+
+.StrTresc .DaneAdresowe { padding-left:10px; width:50%; }
+
+.StrTresc .Tytul { text-align:left; margin:0px 5px 20px 5px; display:block; font-weight:bold; font-size:110%; }
+.StrTresc .StatusZamowienia { display:block; margin:10px 0px 10px 0px; }
+.StrTresc .DataZlozenia { background:url("") no-repeat left center; padding:2px 0px 2px 22px; }
+.StrTresc .Adresat { float:left; padding:5px; width:240px; }
+.StrTresc .Adresat strong { color:#97724c; display:block; margin-bottom:10px; }
+.StrTresc .Szczegoly { float:left; padding:5px; width:240px; }
+.StrTresc .Szczegoly strong { color:#97724c; display:block; margin-bottom:10px; }
+.StrTresc .Adresat ul, .StrTresc .RamkaProcent ul, .StrTresc .Szczegoly ul, .StrTresc .Sekcja ul { list-style-type:none; padding:0px 5px 5px 0px; margin-top:0px }
+.StrTresc .Adresat li, .StrTresc .Szczegoly li, .StrTresc .Sekcja li { line-height:1.5; }
+.StrTresc .SzczegolyData { margin:15px 5px 10px 5px; }
+.StrTresc .SzczegolySzerokie { float:left; padding:5px; width:70%; }
+.StrTresc .SzczegolySzerokie strong { color:#97724c; }
+.StrTresc .SzczegolySzerokie ul { list-style-type:none; padding:10px 5px 5px 0px; margin-top:0px; }
+.StrTresc .SzczegolySzerokie li { line-height:150%; }
+.StrTresc .StatPp { margin:7px 7px 17px 35px; }
+
+/* wyswietlanie ikonkek z linkami w sekcji klienta */
+.StrTresc .Ikonki { padding:5px; text-align:right; }
+
+/* podsumowanie zamowienia */
+.PodsumowanieOpis { display:table-cell; padding-right:8px; vertical-align:middle; }
+.PodsumowanieWartosc { display:table-cell; text-align:right; padding-right:8px; vertical-align:middle; }
+.ZamowienieKomentarz { text-align:left; margin:10px 5px 10px 5px; }
+
+/* sekcja aktualnosci i galerii - wyswietlanie listy artykulow z kategorii oraz zdjec galerii */
+.StrTresc .KomorkaTbl { display:table-cell; vertical-align:top; text-align:left; position:relative; padding:10px; }
+.StrTresc .KomorkaTbl:last-child { border-right:0px; }
+.StrTresc .KomorkaTbl h2 { text-align:right; }
+.StrTresc .KomorkaTbl h2 a { text-align:left; padding:0px; display:block; margin-bottom:5px; font-weight:bold; font-size:110%; }
+.StrTresc .KomorkaTbl .DaneAktualnosci { float:none; text-align:left; margin-bottom:8px; display:block; }
+.StrTresc .KomorkaTbl .DaneAktualnosci em { display:inline-block; margin:2px 2px 2px 0px; padding-right:15px; color:#97724c; font-style:normal; }
+.StrTresc .KomorkaTbl .ZdjecieGalerii { display:block; text-align:center; }
+
+/* w aktualosciach data dodania artykulu i licznik wyswietlen - pojedynczy artykul */
+.DaneAktualnosci { display:block; text-align:left; margin-bottom:15px; }
+.DaneAktualnosci em { display:inline-block; margin:2px 30px 2px 0px; color:#97724c; font-style:normal; }
+.DaneAktualnosci .DataDodania { background:url("") no-repeat left center; padding:2px 0px 2px 22px; }
+.DaneAktualnosci .IloscOdslon { padding:0px; }
+.ZdjecieKategAktualnosci { margin:0px 10px 10px 0px; float:left; }
+
+/* naglowki informacyjne np logowanie, rejestracja */
+.Ramka strong, .Ramka h3 { color:#97724c; font-size:110%; }
+
+/* uzywane np przy logowaniu - podzial strony na 2 czesci */
+.StrTresc .RamkaProcent { width:50%; display:table-cell; vertical-align:top; padding-right:10px; }
+/* podziala na 3 kolumny - np panel klienta */
+.StrTresc .RamkaProcentTrzy { width:33%; display:table-cell; vertical-align:top; }
+
+/* schowek - lista produktow */
+.SchowekWartosc { display:table; border-collapse:collapse; border-spacing:0; margin:10px 0px 10px 0px; }
+.SchowekWartosc .Kom { display:table-cell; padding:0px 5px 0px 0px; vertical-align:bottom; }
+
+/* koszyk */
+#SzczegolyKoszyka { display:table; border-collapse:collapse; border-spacing:0; width:100%; }
+#KrokiZamowienia { width:20%; display:table-cell; vertical-align:top; padding-right:25px; padding-top:11px; }
+#TrescKoszyka { width:80%; display:table-cell; vertical-align:top; }
+.LinkPobraniaKoszykaPDF { text-align:right; margin-bottom:5px; }
+.LinkPobraniaKoszykaPDF a { background:url("") no-repeat right center; display:inline-block; padding:5px 22px 5px 0px; }
+.tip { color: #311a02; background:#f3f0e9; border:1px solid #a79282; display:none; padding:10px; position:fixed; z-index:1000; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; width: 250px; }
+
+/* definicja wygladu kolejnych krokow realizacji zamowienia */
+.KoszykKrok { width:92%; padding:10px; margin-bottom:10px; border:1px solid #e9ceb2; opacity:0.5; filter:alpha(opacity=50); }
+.KoszykKrok.aktywny { opacity:1; filter:alpha(opacity=100); }
+.KoszykKrok.aktywny h5 { background:url("") no-repeat left center; padding:8px 0px 8px 32px; }
+.KoszykKrok h5 { font-size:120%; margin: 0 0 5px; }
+.KoszykKrok p { font-size:110%; margin: 0 0 5px; }
+
+/* koszyk - tabela produktow */
+.Koszyk { width:100%; }
+.Koszyk th { text-align:center; padding:5px; vertical-align:middle; border:1px solid #dccda2; }
+.Koszyk td { text-align:center; padding:5px 10px 5px 10px; vertical-align:middle; border:1px solid #dccda2; }
+.Koszyk .Naglowek th { padding:10px; color:#ffffff; background:#896a4b; text-align:center !important; font-weight:bold; }
+.Koszyk tr td:nth-child(2) { text-align:left; }
+.Koszyk tr td:nth-child(4), .Koszyk tr td:nth-child(6) { white-space:nowrap; }
+.Koszyk .UsunKoszyk { display:inline-block; cursor:pointer; background:url("") no-repeat center top; width:16px; height:16px; }
+.Koszyk input { text-align:center; color:#896a4b; border:1px solid #e9ceb2; padding:5px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.Koszyk .SumaTekst { text-align:right !important; font-weight:bold; font-size:110%; border-left:0px; border-bottom:0px; }
+.Koszyk .Suma { background:#97724c; color:#ffffff; padding:5px 10px 5px 10px; text-align:center !important; font-size:130%; white-space:nowrap; }
+.Koszyk .Suma .Cena { color:#ffffff; font-weight:bold; font-size:110%; }
+.Koszyk .Suma em { color:#ffffff; font-weight:bold; font-size:110%; }
+.Koszyk .Suma small { color:#ffffff; font-weight:normal; }
+.Koszyk .Przelicz { display:block; margin-top:5px; text-align:center; }
+.Koszyk .przycisk { font-size:90%; margin:0px; }
+.Koszyk .Cecha { font-size:90%; display:block; margin-top:2px; font-weight:normal; }
+.Koszyk .Cecha a { font-size:100%; font-weight:normal; }
+.Koszyk .Komentarz { font-size:90%; display:block; margin-top:5px; font-weight:normal; }
+.Koszyk .Komentarz b { font-size:90%; display:block; font-weight:bold; }
+.Koszyk .Komentarz img { float:left; margin:0px 5px 5px 0px; cursor:pointer; }
+.Koszyk .Komentarz textarea { width:100%; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; }
+
+.PodsumowanieInformacja { background:url("") no-repeat center left; padding: 5px 35px 5px; margin: 0px 0px 10px 5px; }
+.DarmowaWysylkaInformacja { background:url("") no-repeat center left; padding:10px 35px 10px; margin:0px 0px 10px 10px; font-size:110%; }
+
+/* koszyk - box wyboru wysylki i platnosci */
+.KontenerDostawaPlatnosc { display:table; border-collapse:collapse; border-spacing:0; width:100%; margin-bottom:10px; }
+.KontenerDostawaPlatnosc .Odstep { width:5px; height:10px; }
+.DostawaWybor { background:#f3f3f3; display:table-cell; border:1px dotted #dccda2; width:50%; padding:0px 10px 0px 10px; }
+.PlatnoscWybor { background:#f3f3f3; display:table-cell; border:1px dotted #dccda2; width:50%; padding:0px 10px 0px 10px; }
+.DostawaWybor h3, .PlatnoscWybor h3 { color: #97724c; font-size:130%; margin-bottom:0.3em; margin-top:1.0em; padding:0 5px; font-weight:normal; }
+.PlatnoscListaWyboru { padding: 10px 15px 10px 0px; }
+.DostawaListaWyboru { padding: 10px 15px 10px 0px; }
+
+.ListaWyboru { padding: 10px 15px 10px 0px; }
+.ListaTbl { display:table; border-collapse:collapse; border-spacing:0; width:100%; margin-bottom:4px; }
+.ListaTbl .ListaRadio { display:table-cell; width:7%; }
+.ListaTbl .ListaOpis { display:table-cell; width:65%; }
+.ListaTbl .ListaCena { display:table-cell; width:28%; text-align:right; font-size:110%; }
+.ListaWyboru input, .InfoPunkty input { margin:4px; padding:4px; }
+.ListaTbl .ListaOpis label { font-size:110%; padding:0px; line-height:16px; }
+.ListaTbl .ListaOpis:hover label { color:#71563b; text-decoration:none; cursor:pointer; }
+.InfoTip { cursor: pointer; margin-left:5px; width:16px; height:16px; display:inline; }
+
+/* koszyk - podsumowanie zamowienia */
+.KontenerKoszykPodsumowanie { float:right; width:49%; }
+.KontenerKoszykPodsumowanie h3 { font-size:130%; margin:8px 0px 0px 5px; }
+.ListaTblPodsumowania { display:table; border-collapse:collapse; border-spacing:0; width:100%; margin-bottom:4px; }
+.ListaTblPodsumowania div { border-bottom:1px solid #dccda2; font-size:110%; display:table-cell; padding:4px; }
+.ListaPodsumowania { padding: 10px 15px 10px; }
+.ListaTblPodsumowania:last-child div { border:0px; }
+.ListaPodsumowaniaCena { border-bottom:1px solid #dccda2; font-size:110%; display:table-cell; text-align:right; }
+.ListaPodsumowaniaCenaUjemna { color: #ff0000; text-align:right; }
+.ListaPodsumowaniaSumaOpis { color:#d6000a; font-size:110%; }
+.ListaPodsumowaniaSumaCena { color:#d6000a; font-weight:bold; font-size:140% !important; text-align:right; }
+
+/* koszyk - informacja o punktach */
+.KontenerInfoPunkty { padding: 10px 15px 10px; text-align:left; font-size:110%; line-height:1.5; }
+.KontenerPunkty { display:table; border:1px solid #dccda2; width:100%; line-height:100%; }
+.KontenerPunkty h3 { color: #97724c; font-size:130%; margin-bottom:0.3em; margin-left:10px; margin-top:1.0em; padding:0 5px; font-weight:normal; }
+.FormularzPunkty { margin:10px 10px 10px 0px; line-height:16px; }
+.FormularzPunkty .UsunPunkty { margin-left:5px; display:inline-block; cursor:pointer; background:url("") no-repeat center top; width:16px; height:16px; }
+#PunktyForm label.error { text-align:left; margin-left:3px; margin-top:0px; margin-bottom:10px;width:160px !important; }
+#PunktyForm div { display:inline; margin-left:10px; }
+
+.KontenerKoszykPozostale { display:table; border:1px solid #dccda2; width:100%; line-height:100%; }
+.KontenerRaty { display:table-cell; border-right:1px solid #dccda2; padding:0px 10px 0 10px; width:15%; }
+.KontenerRaty div { text-align:center; margin-top:10px; }
+.KontenerRaty h5 { color:#311a02; font-size:110%; font-weight:bold; margin-top:1.0em; text-align:center; }
+
+.KontenerKupon { display:table-cell; border-right:1px solid #dccda2; padding: 0 10px 0 20px; width:50%; }
+.KontenerKupon h5 { color:#311a02; font-size:110%; font-weight:bold; margin-top:1.0em; }
+.FormularzKupon { margin:10px 10px 10px 0px; line-height:1.5; }
+.FormularzKupon .Aktywuj { overflow:hidden; display: inline; margin-top:0px; text-align:center; }
+.FormularzKupon .UsunKupon { margin-left:5px; display:inline-block; cursor:pointer; background:url("") no-repeat center top; width:16px; height:16px; }
+#KuponRabatowyForm label.error { text-align:left; margin-left:3px; margin-top:4px; margin-bottom:10px; width:130px !important; }
+#KuponRabatowyForm div { display:inline; margin-right:10px; }
+
+/* koszyk - przycisk zamowienia */
+.KontenerKoszykButton { display:table-cell; position:relative; height:110px; margin:auto; vertical-align:middle; text-align:center; }
+.KontenerKoszykButton strong { background:url("") no-repeat center left; display:block; text-align:left; margin:20px; padding:5px 0px 5px 42px; color:#ff0000; font-size:120%; font-weight:normal; line-height:1.5; }
+.KontenerKoszykButton strong span { white-space:nowrap; }
+
+/* gratisy */
+.Gratisy { padding:10px; margin:10px 0px 10px 0px; }
+.Gratisy .InfoGratis { background:url("") no-repeat left center; padding:4px 4px 4px 35px; font-size:110%; font-weight:bold; margin-bottom:10px; }
+
+/* cennik */
+.PozycjeCennika ul { list-style-type: none; padding: 0; margin: 0; }
+.PozycjeCennika ul li { padding:10px 0px 0px 10px; font-weight:normal; font-weight:bold; }
+.PozycjeCennika ul ul li { font-weight:normal !important; }
+.PozycjeCennika em { display:inline-block; margin-left:5px; font-weight:normal; font-style:normal; }
+.PozycjeCennika a { float:right; }
+
+/* potwierdzenie zamowienia - dane klienta */
+.KontenerDaneKlienta { display:table; border-collapse:collapse; border-spacing:0; width:100%; margin-top:10px; margin-bottom:15px; }
+.KontenerDaneKlienta .Odstep { width:5px; height:10px; }
+.DaneWysylki { background:#f3f3f3; display:table-cell; border:1px dotted #dccda2; width:50%; }
+.DaneFaktura { background:#f3f3f3; display:table-cell; border:1px dotted #dccda2; width:50%; }
+.DaneWysylki h3, .DaneFaktura h3 { color: #97724c; font-size:120%; margin-bottom:0.3em; margin-left:10px; margin-top:1.0em; padding:0 5px; font-weight:normal; }
+.DaneWysylki .Tekst, .DaneFaktura .Tekst { padding: 10px 15px 10px; font-size:110%; line-height:1.5; }
+.DaneFaktura .Tekst div { margin-top:15px; }
+.DaneFaktura ul { list-style-type: none; margin: 0; padding: 0; }
+.DaneWysylki ul { list-style-type: none; margin: 0; padding: 0; }
+
+/* potwierdzenie zamowienia - tabela produktow w potwierdzeniu zamowienia */
+.InfoDuze { font-size:120%; line-height:1.3; }
+.KoszykPotwierdzenie { width:100%; margin-top:20px; }
+.KoszykPotwierdzenie th { text-align:center; padding:5px; vertical-align:middle; border:1px solid #dccda2; }
+.KoszykPotwierdzenie td { text-align:center; padding:5px 10px 5px 10px; vertical-align:middle; border:1px solid #dccda2; }
+.KoszykPotwierdzenie .Naglowek th { padding:10px; color:#ffffff; background:#896a4b; text-align:center !important; font-weight:bold; }
+.KoszykPotwierdzenie tr td:nth-child(1) { text-align:left; width:50%; }
+.KoszykPotwierdzenie tr td:nth-child(2), .KoszykPotwierdzenie tr td:nth-child(4) { white-space:nowrap; padding-right:20px; text-align:right !important; }
+.KoszykPotwierdzenie .Suma { border:0px; padding:5px 10px 5px 10px; font-size:160%; white-space:nowrap; font-weight:bold; }
+.KoszykPotwierdzenie .Tekst { border:0px; white-space:nowrap; font-weight:bold; text-align:right !important; }
+.KoszykPotwierdzenie .Wartosc { border:0px; font-size:110%; white-space:nowrap; font-weight:normal; }
+.KoszykPotwierdzenie .WartoscUjemna { color:#ff0000; border:0px; font-size:110%; white-space:nowrap; font-weight:normal; }
+.KoszykPotwierdzenie .Cecha { font-size:90%; display:block; margin-top:2px; font-weight:normal; }
+.KoszykPotwierdzenie .Cecha  a { font-size:100%; font-weight:normal; }
+.KoszykPotwierdzenie .Komentarz { font-size:90%; display:block; margin-top:2px; font-weight:normal; }
+.KoszykPotwierdzenie .ZmienIlosc { white-space:nowrap; font-weight:normal;color:#a79282; }
+.PotwierdzenieTekst { font-size:110%; font-weight:normal; margin-bottom:7px; }
+.PotwierdzenieTekst b { font-size:120%; }
+.PotwierdzenieTekst .OpisInfo { margin-bottom:8px; margin-top:10px;}
+.PotwierdzenieTekst .OpisInfoItalic { padding:8px; font-style:italic; font-size:90%; margin:10px 0px 10px 0px; border:1px dotted #dccda2;}
+.PotwierdzenieTekst span { margin:0px; }
+.PotwierdzenieTekst h3 { font-size:100% }
+
+.ZmienDane { margin:0px; margin-top:15px; margin-right:10px; float:right; }
+.UwagiZamowienie { margin-top:8px; }
+.UwagiZamowienie b { display:block; margin:5px 0px 10px 0px; }
+
+/* podziekowanie za zlozone zamowienie */
+.Podziekowanie { margin:0px 5px 20px 5px; font-size:160%; font-weight:bold !important; }
+
+/* podsumowanie zamowienia - szczegoly */
+.KontenerSzczegoly { line-height:2; margin-bottom:25px; }
+.KontenerSzczegoly #podsumowanieZamowienia { font-size:110%; list-style-type:none; margin:0; padding:0; margin-top:10px; margin-left:5px; }
+.KontenerSzczegoly #podsumowanieZamowienia li { clear:both; margin: 0; padding: 1px 0; margin-top:3px; }
+.KontenerSzczegoly #podsumowanieZamowienia li strong { float:left; width:200px; }
+.PlatnoscInfo { font-size:110%; margin:10px 0 10px 0; border:1px dotted #e9ceb2; padding:5px; }
+
+/* podsumowanie zamowienia - zgoda do systemow ratalnych */
+.WyrazamZgode { padding: 8px; font-size:110%; font-style:normal; }
+
+/* strona bledu platnosci elektronicznych */
+.KomunikatBledu { color:#ff0000; font-weight:bold; padding: 7px 7px 7px 7px; border:1px dotted #dccda2; }
+
+.InformacjaBrakMagazynProdukt { text-align:left; color:#ff0000; margin-top:5px; background:url("") no-repeat left center; background-size:20px auto; padding:8px 0px 8px 30px; font-weight:bold; }
+.InformacjaBrakMagazyn { text-align:left; color:#ff0000; margin:15px 0px 20px 0px; background:url("") no-repeat left center; padding:8px 0px 8px 40px; font-weight:bold; }
+
+#UsunZaznaczoneKoszyk { margin-top:10px; }
+/* listing produktow - nawigacja */
+.Listing { margin-bottom:5px; }
+.Listing #BrakProduktow { margin:10px 0px 0px 0px; text-align:center; font-weight:bold; display:inline-block; }
+.Listing .OpisListing .ZdjecieListing { float:left; margin:0px 10px 10px 0px; }
+.Listing .ListingNawigacja { margin:0px 0px 10px 0px; padding:5px 10px 5px 10px; border-top:0px; border-left:0px; border-right:0px; }
+.Listing .IndexStron { float:left; }
+.Listing .IndexStron b { display:inline-block; margin:0px 10px 0px 0px; }
+.Listing .IndexStron span { display:inline-block; margin:0px 0px 0px 10px; }
+.Listing .IndexStron a { opacity:0.5; filter:alpha(opacity=50); display:inline-block; min-width:20px; height:20px; margin:2px; border:1px solid #e9ceb2; background:#f3f3f3; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; -khtml-border-radius:4px; text-align:center; line-height:20px; }
+.Listing .IndexStron a:hover { color:#71563b; opacity:1; filter:alpha(opacity=100); }
+.Listing .IndexStron .Aktywna { color:#71563b; font-weight:bold; opacity:1; filter:alpha(opacity=100); }
+.Listing .SposobWyswietlania { float:right; text-align:right; }
+.Listing .SposobWyswietlania span { display:inline-block; margin:2px; opacity:0.4; filter:alpha(opacity=40); width:24px; height:24px; cursor:pointer; }
+.Listing .SposobWyswietlania span:hover { opacity:1; filter:alpha(opacity=100); }
+.Listing .SposobWyswietlania span:nth-child(2) { background:url("listingOkna.png") #f3f3f3; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; border:1px solid #e9ceb2; }
+.Listing .SposobWyswietlania span:nth-child(3) { background:url("listingWiersze.png") #f3f3f3; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; border:1px solid #e9ceb2; }
+.Listing .SposobWyswietlania span:nth-child(4) { background:url("listingProsty.png") #f3f3f3; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; border:1px solid #e9ceb2; }
+.Listing .SposobWyswietlania span.Tak { opacity:1; filter:alpha(opacity=100); }
+.Listing .Sortowanie { float:left; }
+.Listing .Sortowanie ul { list-style-type:none; padding:0px; margin:5px 0px 0px 0px; }
+.Listing .Sortowanie li { float:left; margin:0px 5px 0px 5px; }
+.Listing .Sortowanie li:first-child { margin:0px; }
+.Listing .Sortowanie li span { float:left; line-height:16px; display:inline-block; margin:0px 2px 0px 2px; opacity:0.2; filter:alpha(opacity=20); }
+.Listing .Sortowanie li span:hover { opacity:1; filter:alpha(opacity=100); }
+.Listing .Sortowanie li span:first-child { background:url("") no-repeat center center; width:16px; height:16px; cursor:pointer; }
+.Listing .Sortowanie li span:nth-child(2) { opacity:1; filter:alpha(opacity=100); }
+.Listing .Sortowanie li span:nth-child(3) { background:url("") no-repeat center center; width:16px; height:16px; cursor:pointer; }
+.Listing .Sortowanie span.Tak { opacity:1; filter:alpha(opacity=100); }
+.Listing .Sortowanie b { display:inline-block; margin:0px 10px 0px 0px; line-height:16px; }
+.Listing .IloscProdStronie { float:right; margin-top:2px; }
+.Listing .IloscProdStronie span { opacity:0.5; filter:alpha(opacity=50); line-height:18px; text-align:center; display:inline-block; margin:2px; width:18px; height:18px; cursor:pointer; border:1px solid #e9ceb2; background:#f3f3f3; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; -khtml-border-radius:4px; text-align:center; }
+.Listing .IloscProdStronie span:hover { color:#71563b; opacity:1; filter:alpha(opacity=100); }
+.Listing .IloscProdStronie span.Tak { color:#71563b; font-weight:bold; opacity:1; filter:alpha(opacity=100); }
+
+/* listing - filtry - wyglad filtrow i calego okna filtrow */
+.Listing .ListingFiltry { margin:0px 0px 10px 0px; padding:5px 10px 5px 10px; border:0px; }
+.Listing .ListingFiltry .ZakresCen { float:left; margin:5px 20px 5px 0px; }
+.Listing .ListingFiltry .ZakresCen b { display:inline-block; margin:0px 5px 0px 0px; font-weight:normal; }
+.Listing .ListingFiltry .Multi { float:left; margin:5px 20px 5px 0px; }
+.Listing .ListingFiltry .Multi span { cursor:pointer; display:block; font-weight:normal; border:1px solid #e9ceb2; padding:5px 30px 5px 10px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; background:url("strzalkaSelect.png") no-repeat right center; }
+.Listing .ListingFiltry .Multi b { font-weight:normal; }
+.Listing .ListingFiltry .Multi b.Wlaczony { background:url("") no-repeat left center; padding-left:25px; font-weight:bold; }
+.Listing .ListingFiltry .Multi .Wybor { white-space:nowrap; z-index:999; display:none; overflow-y:auto; overflow-x:hidden; max-height:300px; background:#ffffff; position:absolute; margin:0px; margin-top:-2px; min-width:60px; border:1px solid #e9ceb2; padding:5px 25px 5px 5px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.Listing .ListingFiltry strong { color:#97724c; display:block; margin:10px 0px 8px 0px; font-size:110%; }
+.Listing .ListingFiltry .Rg { margin:5px 0px 8px 0px; float:right; }
+.Listing .ListingFiltry .Rg a { font-size:110%; font-weight:bold; background:url("") no-repeat left center; margin-right:10px; padding:2px 2px 2px 20px; }
+.Listing .ListingFiltry .Rg a:hover { color:#71563b; }
+.Listing .ListingFiltry .cl { float:none !important; }
+
+/* listing - podkategorie w listingu produktow po kliknieciu na kategorie */
+.Listing .Podkategorie { text-align:center; }
+.Listing .Podkategorie strong { color:#97724c; display:none; margin-bottom:7px; font-size:140%; }
+.Listing .Podkategorie ul { list-style-type:none; padding:0px; margin:0px 0px 10px 0px; }
+.Listing .Podkategorie ul li { display:inline-block; vertical-align:top; text-align:center; }
+.Listing .Podkategorie ul.KategoriaBezZdjecia a { margin:5px; display:block; color:#ffffff; font-weight:bold; font-size:110%; padding:6px 12px 6px 12px; background:#896a4b; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.Listing .Podkategorie ul.KategoriaBezZdjecia a:hover { background:#71563b; }
+.Listing .Podkategorie ul.KategoriaZdjecie a { display:inline-block; font-weight:bold; font-size:110%; padding:6px 12px 6px 12px; text-align:center; }
+.Listing .Podkategorie a em { display:inline-block; margin-left:5px; font-weight:normal; font-style:normal; }
+
+/* porownywanie produktow - okno w listingu z lista produktow */
+#Porownywanie { padding:15px; margin:10px 0px 10px 0px; background:url("tlo_stopka.jpg"); -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; -moz-box-shadow: 0 0 30px #7c4b17 inset; -webkit-box-shadow: 0 0 30px #7c4b17 inset; box-shadow: 0 0 30px #7c4b17 inset; }
+#Porownywanie strong { display:block; margin-bottom:15px; font-size:110%; color:#422503; }
+#Porownywanie a { padding:5px 10px 5px 0px; display:inline-block; color:#422503; }
+#Porownywanie a:hover { color:#000000; }
+#ListaProduktowPorownanie span { background:url("") no-repeat left center; width:16px; height:16px; margin:3px 10px 0px 0px; float:left; cursor:pointer; display:inline-block; }
+
+/* listing produktow - wyglad w oknach */
+.Listing .ListingOkna { margin-bottom:0px; }
+.Listing .Okno { display: table-cell; vertical-align:top; text-align:center; padding:10px 5px 10px 5px; }
+.Listing .Okno:last-child { border-right:0px; }
+.Listing .Okno h3 { text-align:left; margin-left:10px; }
+.Listing .Okno .Foto { display:table-cell; vertical-align:middle; }
+.Listing .Okno .Foto a { padding:0px !important; position:relative; }
+.Listing .Okno .Zdjecie { margin:0px 0px 10px 0px; }
+.Listing .Okno .Opis { text-align:left; display:block; margin:2px 10px 10px 10px !important; line-height:1.5; font-size:110%; }
+.Listing .Okno .DataDostepnosci { text-align:center; display:block; margin:10px !important; padding:10px 10px 5px 10px; }
+.Listing .Okno .DataDostepnosci b { text-align:center; display:block; margin:5px; font-size:110%; }
+.Listing .Okno .Zakup { display:inline-block; margin:0px auto; margin-top:20px; }
+.Listing .Okno .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.Listing .Okno .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+/* wyskakujacy z gory napis zobacz szczegoly z lupa */
+.Listing .Okno .AnimacjaZobacz { overflow:hidden; position:relative; }
+.Listing .Okno a { padding:7px 10px 10px 0px; display:inline-block; }
+.Listing .Okno .Zobacz { margin:-60px 0px 0px 0px; position:absolute; display:none; z-index:100; }
+.Listing .Okno .Zobacz strong { margin:0px auto; width:95%; display:none; background:url("tlo_zobacz_szczegoly_modul.png") repeat-x; 
+                                    -moz-box-shadow: 0 8px 6px -6px #928374; -webkit-box-shadow: 0 8px 6px -6px #928374; box-shadow: 0 8px 6px -6px #928374; 
+                                    -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; }
+.Listing .Okno .Zobacz a { color:#71563b; font-weight:bold; background:url("lupa_modul.png") no-repeat left center; margin-left:10px; padding:15px 10px 10px 30px !important; font-family: 'PT Sans', Arial, Tahoma, Verdana, sans-serif; }
+.Listing .Okno .Zobacz a:hover { color:#896a4b; }
+.Listing .Okno .Poly { display:table-cell; vertical-align:middle; text-align:center; width:50%; }
+
+/* listing produktow - wyglad w wierszach */
+.Listing .Wiersz { margin-bottom:8px; padding:10px 0px 10px 0px; }
+.Listing .Wiersz:last-child { border-bottom:0px; }
+.Listing .Wiersz { text-align:center; width:100%; margin:0px auto; position:relative; padding-top:10px; }
+.Listing .Wiersz .Foto { float:left; }
+.Listing .Wiersz .ProdCena { text-align:left; padding-right:5px; }
+.Listing .Wiersz .ProdCena a { padding:0px 10px 10px 0px; display:inline-block; }
+.Listing .Wiersz .ProdCena .Producent { margin-top:5px; display:block; }
+.Listing .Wiersz .ProdCena .Producent a { font-weight:bold; padding-bottom:0px; }
+.Listing .Wiersz .ProdCena .Producent em { font-style:normal; font-weight:normal; }
+.Listing .Wiersz .ProdCena .NumerKatalogowy { margin-top:5px; display:block; }
+.Listing .Wiersz .ProdCena .NumerKatalogowy em { font-style:normal; font-weight:normal; }
+.Listing .Wiersz .ProdCena .Opis { margin-top:5px; text-align:left; display:block; padding:5px 5px 5px 0px; }
+.Listing .Wiersz .ProdCena .DataDostepnosci { display:block; text-align:left; margin:8px 0px 8px 0px; }
+.Listing .Wiersz .ProdCena .DataDostepnosci b { font-size:110%; }
+.Listing .Wiersz .Zakup { margin-top:10px; }
+.Listing .Wiersz .Zakup a { float:left; margin:0px 50px 0px 0px; }
+.Listing .Wiersz .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.Listing .Wiersz .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+.Listing .Wiersz .Zakup .DoKoszyka { margin-right:50px; }
+.Listing .Wiersz .Zakup .Porownaj { float:left; display:inline-block; cursor:pointer; background:url("") no-repeat left center; margin:8px 30px 0px 0px; padding:3px 0px 3px 22px; }
+.Listing .Wiersz .Zakup .Porownaj:hover { color:#71563b; }
+.Listing .Wiersz .Zakup .PorownajWlaczone { float:left; display:inline-block; cursor:pointer; background:url("") no-repeat left center; margin:8px 30px 0px 0px; padding:3px 0px 3px 22px; }
+.Listing .Wiersz .Zakup .PorownajWlaczone:hover { color:#71563b; }
+.Listing .Wiersz .Zakup .Schowek { float:left; display:inline-block; cursor:pointer; background:url("") no-repeat left center; margin:8px 0px 0px 0px; padding:3px 0px 3px 22px; }
+.Listing .Wiersz .Zakup .Schowek:hover { color:#71563b; }
+
+/* listing produktow - wyglad jako lista */
+.Listing .Lista { margin-bottom:8px; padding:10px 0px 10px 0px; }
+.Listing .Lista:last-child { border-bottom:0px; }
+.Listing .Lista .ProdCena { text-align:left; padding-right:10px; margin-right:150px; }
+.Listing .Lista .ProdCena a { padding:0px 0px 5px 0px; display:inline-block; }
+.Listing .Lista .ProdCena .Opis { padding:5px 0px 5px 0px; text-align:left; display:block; }
+.Listing .Lista .ProdCena .DataDostepnosci { display:block; text-align:left; margin:12px 0px 8px 0px; }
+.Listing .Lista .ProdCena .DataDostepnosci b { font-size:110%; }
+.Listing .Lista .ProdCena .NumerKatalogowy { display:block; text-align:left; margin:5px 0px 5px 0px; }
+.Listing .Lista .ProdCena .NumerKatalogowy em { font-style:normal; font-weight:normal; }
+.Listing .Lista .Zakup { float:right; width:140px; overflow:hidden; text-align:left; }
+.Listing .Lista .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.Listing .Lista .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+.Listing .Lista .Zakup .Porownaj { display:block; cursor:pointer; background:url("") no-repeat left center; margin:8px 0px 0px 0px; padding:3px 0px 3px 22px; }
+.Listing .Lista .Zakup .Porownaj:hover { color:#71563b; }
+.Listing .Lista .Zakup .PorownajWlaczone { display:block; cursor:pointer; background:url("") no-repeat left center; margin:8px 0px 0px 0px; padding:3px 0px 3px 22px; }
+.Listing .Lista .Zakup .PorownajWlaczone:hover { color:#71563b; }
+.Listing .Lista .Zakup .Schowek { display:block; cursor:pointer; background:url("") no-repeat left center; margin:3px 0px 0px 0px; padding:3px 0px 3px 22px; }
+.Listing .Lista .Zakup .Schowek:hover { color:#71563b; }
+
+/* listing produktow - wyglad recenzje wszystkie */
+.Listing .Recenzje { margin-bottom:8px; padding:10px 0px 10px 0px; }
+.Listing .Recenzje:last-child { border-bottom:0px; }
+.Listing .Recenzje .Foto { float:left; }
+.Listing .Recenzje .ProdRecenzja { text-align:left; padding-right:5px; }
+.Listing .Recenzje .ProdRecenzja a { padding:0px 0px 5px 0px; display:inline-block; }
+.Listing .Recenzje .ProdRecenzja .RecenzjaTresc { display:block; padding:5px 5px 5px 2px; margin-top:8px; text-align:left; }
+.Listing .Recenzje .ProdRecenzja .AutorData { display:block; padding:5px 5px 5px 2px; line-height:1.5; }
+
+/* listing produktow - wyglad w schowku */
+.Listing .SchowekPrd { margin-bottom:8px; padding:10px 0px 10px 0px; }
+.Listing .SchowekPrd:last-child { border-bottom:0px; }
+.Listing .SchowekPrd { text-align:center; width:100%; margin:0px auto; position:relative; padding-top:10px; }
+.Listing .SchowekPrd .Foto { float:left; }
+.Listing .SchowekPrd .ProdCena { text-align:left; padding-right:10px; margin-right:100px; }
+.Listing .SchowekPrd .ProdCena a { padding:0px 10px 10px 0px; display:inline-block; }
+.Listing .SchowekPrd .ProdCena .Opis { margin-top:5px; text-align:left; display:block; padding:5px 5px 5px 0px; }
+.Listing .SchowekPrd .Zakup { margin-top:10px; }
+.Listing .SchowekPrd .Zakup a { float:left; margin:0px 50px 0px 0px; }
+.Listing .SchowekPrd .Zakup .InputIlosc { float:left; text-align:center; width:30px; margin:4px 5px 4px 0px; }
+.Listing .SchowekPrd .Zakup em { display:inline-block; float:left; font-style:normal; margin:10px 15px 5px 0px; }
+.Listing .SchowekPrd .Zakup .DoKoszyka { margin-right:50px; }
+.Listing .SchowekPrd .Zakup .Porownaj { float:left; display:inline-block; cursor:pointer; background:url("") no-repeat left center; margin:8px 30px 0px 0px; padding:3px 0px 3px 22px; }
+.Listing .SchowekPrd .Zakup .Porownaj:hover { color:#71563b; }
+.Listing .SchowekPrd .Zakup .PorownajWlaczone { float:left; display:inline-block; cursor:pointer; background:url("") no-repeat left center; margin:8px 30px 0px 0px; padding:3px 0px 3px 22px; }
+.Listing .SchowekPrd .Zakup .PorownajWlaczone:hover { color:#71563b; }
+.Listing .SchowekPrd .UsunSchowek { float:right; width:90px; text-align:center; }
+.Listing .SchowekPrd .UsunSchowek span { display:inline-block; cursor:pointer; background:url("") no-repeat center top; padding:20px 0px 0px 0px; }
+.Listing .SchowekPrd .UsunSchowek span:hover { color:#71563b; }
+
+/* listing produktow - wyglad w koszyku gratisow */
+.Gratisy .Wiersz { margin-bottom:8px; padding:10px 0px 10px 0px; }
+.Gratisy .Wiersz:last-child { border-bottom:0px; }
+.Gratisy .Wiersz { text-align:center; width:100%; margin:0px auto; position:relative; padding-top:10px; }
+.Gratisy .Wiersz .ProdCena { text-align:left; display:table; width:90%; border-collapse:collapse; }
+.Gratisy .Wiersz .Foto { display:table-cell; width:15%; vertical-align:top; text-align:left; }
+.Gratisy .Wiersz .NazwaKoszyk { display:table-cell; width:30%; vertical-align:top; }
+.Gratisy .Wiersz .NazwaKoszyk h3 a { padding:0px 10px 10px 0px; display:inline-block; }
+.Gratisy .Wiersz .InfoCena { display:table-cell; width:55%; vertical-align:middle; }
+.Gratisy .Wiersz .InfoCena strong { font-size:110%; }
+.Gratisy .Wiersz .InfoCena strong:nth-child(2) { font-size:150%; }
+.Gratisy .Wiersz .InfoCena strong:last-child { font-size:130%; color:#ff0000; }
+
+.Listing .Wiersz .ProdCena ul.ListaOpisowa { list-style-type:none; padding:5px 0px 5px 0px; margin:0px; color:#929090; }
+.Listing .Wiersz .ProdCena ul.ListaOpisowa li { margin-top:5px; }
+.Listing .Wiersz .ProdCena ul.ListaOpisowa li b { color:#444444; }
+.Listing .Wiersz .ProdCena ul.ListaOpisowa li a { font-weight:bold; padding:0px; }
+.Listing .Lista .ProdCena ul.ListaOpisowa { list-style-type:none; padding:5px 0px 5px 0px; margin:0px; color:#929090; }
+.Listing .Lista .ProdCena ul.ListaOpisowa li { margin-top:5px; }
+.Listing .Lista .ProdCena ul.ListaOpisowa li b { color:#444444; }
+.Listing .Lista .ProdCena ul.ListaOpisowa li a { font-weight:bold; padding:0px; }/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:20000; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch; padding-top:28px;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url("overlay.png") repeat 0 0;}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:21px; height:21px; background:url("controls.png") no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url("controls.png") no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url("controls.png") no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url("controls.png") no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url("controls.png") left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url("controls.png") right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url("border.png") 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url("border.png") 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; top:4px; left:58px; color:#949494;}
+        #cboxLoadingOverlay{background:url("loading_background.png") no-repeat center center;}
+        #cboxLoadingGraphic{background:url("loading.gif") no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; top:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; top:0; left:0; background:url("controls.png") no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; top:0; left:27px; background:url("controls.png") no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxClose{position:absolute; top:0; right:0; background:url("controls.png") no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
